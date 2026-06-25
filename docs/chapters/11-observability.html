@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
   <link rel="stylesheet" href="../css/reader.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
 </head>
 <body class="chapter-page accent-flow">
   <nav class="top"><div class="inner">
@@ -61,7 +62,7 @@
 <li>Execute week-one lab correlating stderr, die bus, and packet field jsonl.</li>
 </ul>
 </div>
-<nav class="chapter-toc" aria-label="In this chapter"><h2>In this chapter</h2><ol><li><a href="#toc-11-introduction-grep-is-forensic-defense">Introduction — grep is forensic defense</a></li><li><a href="#toc-11-ellie-logging-categories">ELLIE logging categories</a></li><li><a href="#toc-11-prompt-terminal-partial-but-real">Prompt terminal — partial but real</a></li><li><a href="#toc-11-rtxprobe">RTXProbe</a></li><li><a href="#toc-11-nexus-panel">NEXUS panel</a></li><li><a href="#toc-11-week-one-operator-lab">Week-one operator lab</a></li><li><a href="#toc-11-sovereign-time-preview">Sovereign time preview</a></li><li><a href="#toc-11-chapter-summary">Chapter summary</a></li><li><a href="#toc-11-study-questions">Study questions</a></li><li><a href="#toc-11-ellie-status-block-field-by-field">ELLIE STATUS block — field by field</a></li><li><a href="#toc-11-correlating-three-scales-at-panel">Correlating three scales at panel</a></li><li><a href="#toc-11-rtx-zero-idle-posture">RTX Zero idle posture</a></li><li><a href="#toc-11-observability-drill-block-1">Observability drill block 1</a></li><li><a href="#toc-11-observability-drill-block-2">Observability drill block 2</a></li></ol></nav>
+<nav class="chapter-toc" aria-label="In this chapter"><h2>In this chapter</h2><ol><li><a href="#toc-11-introduction-grep-is-forensic-defense">Introduction — grep is forensic defense</a></li><li><a href="#toc-11-ellie-logging-categories">ELLIE logging categories</a></li><li><a href="#toc-11-prompt-terminal-partial-but-real">Prompt terminal — partial but real</a></li><li><a href="#toc-11-rtxprobe">RTXProbe</a></li><li><a href="#toc-11-nexus-panel">NEXUS panel</a></li><li><a href="#toc-11-final-eye-1-0-sovereign-vision-layer">Final_Eye 1.0 — sovereign vision layer</a></li><li><a href="#toc-11-week-one-operator-lab">Week-one operator lab</a></li><li><a href="#toc-11-sovereign-time-preview">Sovereign time preview</a></li><li><a href="#toc-11-chapter-summary">Chapter summary</a></li><li><a href="#toc-11-study-questions">Study questions</a></li><li><a href="#toc-11-ellie-status-block-field-by-field">ELLIE STATUS block — field by field</a></li><li><a href="#toc-11-correlating-three-scales-at-panel">Correlating three scales at panel</a></li><li><a href="#toc-11-rtx-zero-idle-posture">RTX Zero idle posture</a></li><li><a href="#toc-11-observability-drill-block-1">Observability drill block 1</a></li></ol></nav>
 
 <div class="on-the-way">
 <h2 id="toc-11-on-the-way-what-you-will-learn">On the way — what you will learn</h2>
@@ -95,6 +96,13 @@ guide</pre>
 <p>https://127.0.0.1:9477/ — command, packets, threats, signals, DNS, library, system. RTX Zero ?rtx=1 — Aqua chrome, cache-first refresh.</p>
 <figure class="figure"><img src="../assets/images/chapters/ch05-packet-perimeter.jpg" alt="Panel and perimeter" loading="lazy" /><figcaption>Figure 11.4 — Panel slice beside packet perimeter — one battlefield map.</figcaption></figure>
 
+
+<h2 id="toc-11-final-eye-1-0-sovereign-vision-layer">Final_Eye 1.0 — sovereign vision layer</h2>
+<p><span class="tag impl">Implemented.</span> <strong>Final_Eye v1.0.0</strong> (<a href="https://github.com/ZacharyGeurts/Final_Eye">Final_Eye</a>) is the robotics vision operator surface at <code>http://127.0.0.1:9479/ops</code> — Field Ops UI with honesty-labeled panels, release matrix, and eight subsystem sections (robotics → integration).</p>
+<p>Stack: <strong>ZOCRSM1</strong> field vision ingress · <strong>GRKMF1/GVC1</strong> proprietary media (not MPEG) · silent capture by default · Grok16 <code>field_opt</code> compiler · Queen forge · Hostess7 truth bridge · ZAC vision pack/restore.</p>
+<p>War mode: combat fps 3–20 AI on demand. Dishes mode: cinema up to 240 fps doctrine. Code seal + GVC1 tamper rejection + stream AES-GCM/HMAC — grep <code>zocr_security.py</code> before protected capture.</p>
+<p>Quick verify: <code>python3 zocr_security.py seal</code> · <code>./tests/run_tests.sh</code> · <code>GET /api/ops/full</code>. Field compiler C/C++: <code>GET /api/field/compile/full</code>.</p>
+<p>Cross-read: <a href="21-field-browser-queen.html">Chapter 21 Queen</a> (browser gates) · <a href="19-sovereign-time.html">Chapter 19 Sovereign Time</a> (eyeball ticks) · <a href="22-glossary.html#final-eye">Glossary — Final_Eye</a>.</p>
 
 <h2 id="toc-11-week-one-operator-lab">Week-one operator lab</h2>
 <ol>
@@ -517,8 +525,8 @@ guide</pre>
 <p>Major claims in this chapter anchored for reproducibility. <span class="tag impl">Implemented</span> = grep today; <span class="tag meta">Metaphor</span> = intuition; <span class="tag phil">Philosophy</span> = discipline.</p>
 <table><thead><tr><th>Claim</th><th>Statement</th><th>Label</th><th>Evidence</th></tr></thead>
 <tbody><tr><td>ELLIE categories</td><td>Categorized stderr</td><td><span class="tag impl">Implemented</span></td><td><code>MAIN/VULKAN/CANVAS/THERMO/STATUS</code></td></tr><tr><td>Panel :9477</td><td>Human correlation UI</td><td><span class="tag impl">Implemented</span></td><td><code>NEXUS local panel</code></td></tr><tr><td>Screenshot culture</td><td>Pretty frames as proof</td><td><span class="tag phil">Philosophy</span></td><td><code>Rejected — grep first</code></td></tr><tr><td>Operator journal</td><td>Weekly rhythm</td><td><span class="tag phil">Philosophy</span></td><td><code>Receipts over vibes</code></td></tr></tbody></table>
-<pre class="eq">observability = stderr_categories × panel_correlation × jsonl_archive</pre>
-<pre class="eq">grep -E &#x27;^(MAIN|VULKAN|THERMO)&#x27; run.log | tail -40</pre>
+<div class="eq-block">\[observability = stderr_categories × panel_correlation × jsonl_archive\]</div>
+<pre class="grep-hook">grep -E &#x27;^(MAIN|VULKAN|THERMO)&#x27; run.log | tail -40</pre>
 <h3>Source paths</h3>
 <ul class="source-anchors"><li><code>Navigator/engine/ELLIE.hpp</code></li><li><code>NEXUS-Shield/panel_server.py</code></li></ul>
 </div>
@@ -532,5 +540,8 @@ guide</pre>
   </main>
   <footer><p>Field Technology v5 · Serious book · We do not hide the rocks.</p></footer>
   <script src="../js/reader.js" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+  <script defer src="../js/katex-render.js"></script>
 </body>
 </html>

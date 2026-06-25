@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
   <link rel="stylesheet" href="../css/reader.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
 </head>
 <body class="chapter-page accent-flow">
   <nav class="top"><div class="inner">
@@ -194,6 +195,9 @@
 <h3>Field Die</h3>
 <p><strong>Field Die</strong> — GPU SSBO simulating x86 guest with 64 MiB RAM — addressable universe on silicon.</p>
 <p>In textbook usage, <em>Field Die</em> appears wherever operators cross engine, NEXUS, and Queen boundaries. If you meet Field Die in a panel slice, jsonl receipt, or shader header, this definition is the canonical Field Technology v5 reading — not generic industry jargon unless explicitly noted.</p>
+<h3 id="final-eye">Final_Eye</h3>
+<p><strong>Final_Eye</strong> — <span class="tag impl">Implemented</span> Sovereign robotics vision product v1.0.0 — ZOCRSM1 ingress, GRKMF1/GVC1 media, Field Ops at :9479, Grok16 field_opt, Queen/Hostess/ZAC integration. Tagged <code>v1.0.0</code> on GitHub ZacharyGeurts/Final_Eye.</p>
+<p>In textbook usage, <em>Final_Eye</em> is the vision layer beside NEXUS panel (:9477) and AMOURANTHRTX fabric — not cloud omniscience, local sovereign capture with sealed integrity.</p>
 <h3>field jsonl</h3>
 <p><strong>field jsonl</strong> — Append-only packet field log — grep forensic backbone.</p>
 <p>In textbook usage, <em>field jsonl</em> appears wherever operators cross engine, NEXUS, and Queen boundaries. If you meet field jsonl in a panel slice, jsonl receipt, or shader header, this definition is the canonical Field Technology v5 reading — not generic industry jargon unless explicitly noted.</p>
@@ -249,6 +253,8 @@
 <h3>Grok Build</h3>
 <p><strong>Grok Build</strong> — Secure build channel referenced in sovereign field package manifests.</p>
 <p>In textbook usage, <em>Grok Build</em> appears wherever operators cross engine, NEXUS, and Queen boundaries. If you meet Grok Build in a panel slice, jsonl receipt, or shader header, this definition is the canonical Field Technology v5 reading — not generic industry jargon unless explicitly noted.</p>
+<h3>GVC1</h3>
+<p><strong>GVC1</strong> — <span class="tag impl">Implemented</span> Grok Vision Codec v1 inside GRKMF1 — proprietary envelope, tamper rejection, not MPEG. Final_Eye verifies integrity via <code>verify_gvc1_integrity()</code>.</p>
 <h2 id="toc-22-h">H</h2>
 <h3>hardwareFabric</h3>
 <p><strong>hardwareFabric</strong> — Read-only Spiderweb mirror of averaged fabric channels — dashboard not second sim.</p>
@@ -513,6 +519,8 @@
 <p><strong>x86.comp</strong> — Field Die compute shader — guest interpretation and Big Grin HUD.</p>
 <p>In textbook usage, <em>x86.comp</em> appears wherever operators cross engine, NEXUS, and Queen boundaries. If you meet x86.comp in a panel slice, jsonl receipt, or shader header, this definition is the canonical Field Technology v5 reading — not generic industry jargon unless explicitly noted.</p>
 <h2 id="toc-22-z">Z</h2>
+<h3>ZAC</h3>
+<p><strong>ZAC</strong> — <span class="tag impl">Implemented</span> ZOCR Artifact Container v1 — vision state pack/restore in Final_Eye (<code>zocr_zac.py</code>), aligned with World_Redata monolith discipline.</p>
 <h3>Zachary Geurts</h3>
 <p><strong>Zachary Geurts</strong> — Architect and author — AMOURANTHRTX, NEXUS-Shield, Queen, Field Primer.</p>
 <p>In textbook usage, <em>Zachary Geurts</em> appears wherever operators cross engine, NEXUS, and Queen boundaries. If you meet Zachary Geurts in a panel slice, jsonl receipt, or shader header, this definition is the canonical Field Technology v5 reading — not generic industry jargon unless explicitly noted.</p>
@@ -664,8 +672,8 @@
 <p>Major claims in this chapter anchored for reproducibility. <span class="tag impl">Implemented</span> = grep today; <span class="tag meta">Metaphor</span> = intuition; <span class="tag phil">Philosophy</span> = discipline.</p>
 <table><thead><tr><th>Claim</th><th>Statement</th><th>Label</th><th>Evidence</th></tr></thead>
 <tbody><tr><td>Glossary</td><td>Canonical term readings</td><td><span class="tag impl">Implemented</span></td><td><code>This chapter</code></td></tr><tr><td>Master rocks</td><td>Consolidated honesty</td><td><span class="tag impl">Implemented</span></td><td><code>#master-rocks appendix</code></td></tr><tr><td>Disambiguation</td><td>Overload splits</td><td><span class="tag impl">Implemented</span></td><td><code>Phi vs RF vs entropy layers</code></td></tr><tr><td>Linear read</td><td>Required?</td><td><span class="tag phil">Philosophy</span></td><td><code>Grep table — don&#x27;t read A–Z linearly</code></td></tr></tbody></table>
-<pre class="eq">term_status ∈ {Implemented, Metaphor, Philosophy, Visual}</pre>
-<pre class="eq">Anchor: #master-rocks in this chapter</pre>
+<div class="eq-block">\[term_status ∈ {Implemented, Metaphor, Philosophy, Visual}\]</div>
+<pre class="grep-hook">Anchor: #master-rocks in this chapter</pre>
 <h3>Source paths</h3>
 <ul class="source-anchors"><li><code>content/chapters/22.html</code></li><li><code>scripts/master_rocks_table.py</code></li></ul>
 </div>
@@ -675,9 +683,28 @@
 <p>Glossary indexed — overloaded words disambiguated. Keep beside any chapter; definitions formal, rocks still visible.</p>
 </div>
 
+
+<h2 id="horizon">Horizon appendix — proposed, not promised</h2>
+<p><span class="tag phil">Philosophy / roadmap discipline.</span> Items here are honest gaps and research directions. They do not appear in the engineering spine (Chapters 2–12, 19–21) as if shipped. When an item closes, move it to Chapter 12 or the <a href="#master-rocks">master rocks</a> table with an <span class="tag impl">Implemented</span> row.</p>
+<table><thead><tr><th>Horizon item</th><th>Today</th><th>Proposed</th><th>Label</th></tr></thead>
+<tbody>
+<tr><td>GPU Landauer joules</td><td><code>entropyThisFrame</code> proxy</td><td>Calibrated package power correlation</td><td><span class="tag meta">Metaphor</span> → future <span class="tag impl">Implemented</span></td></tr>
+<tr><td>DNSSEC wire validation</td><td>Stub counters + <code>dig +trace</code> discipline</td><td>Full validator in field-services stack</td><td><span class="tag meta">Metaphor</span> phase 2</td></tr>
+<tr><td>Queen gate parity</td><td><code>QUEEN_READY</code> when built</td><td>All gate classes on production parity</td><td><span class="tag impl">Implemented</span> partial</td></tr>
+<tr><td>Cross-host sovereign time</td><td>HMAC pulses + <code>SQUIDGIE</code> posture</td><td>Adversarial NTP soak tests</td><td><span class="tag impl">Implemented</span> posture</td></tr>
+<tr><td>Hostess SDF at scale</td><td>Segment workflow + human plates</td><td>Cross-corpus ZAC monolith verify at scale</td><td><span class="tag meta">Metaphor</span> + <span class="tag impl">Implemented</span> doctrine</td></tr>
+<tr><td>RF planetary shell</td><td><code>planetary_weave.comp</code> visual</td><td>Field Antenna + calibrated spectrum path</td><td><span class="tag vis">Visual</span> today</td></tr>
+<tr><td>Sub-micron SEM tiers</td><td>Procedural Adept detail</td><td>Lab instrument correlation</td><td><span class="tag meta">Metaphor</span></td></tr>
+<tr><td>KILROY daily driver</td><td>bzImage + QEMU boot</td><td>Production host parity on operator laptops</td><td><span class="tag impl">Implemented</span> image</td></tr>
+</tbody></table>
+<p><strong>Operator rule:</strong> Do not cite Horizon rows in status email as shipped. Cite grep from the validation table in <a href="chapters/01-preface.html">Chapter 1</a> or evidence anchors in the chapter you are defending.</p>
+
     <nav class="chapter-nav bottom"><a class="btn secondary" href="21-field-browser-queen.html">← Ch 21</a> <a class="btn" href="../creditors/love-and-god.html">Love &amp; God →</a></nav>
   </main>
   <footer><p>Field Technology v5 · Serious book · We do not hide the rocks.</p></footer>
   <script src="../js/reader.js" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+  <script defer src="../js/katex-render.js"></script>
 </body>
 </html>

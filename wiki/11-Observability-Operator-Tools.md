@@ -27,6 +27,14 @@ Browser panel `https://127.0.0.1:9477/` — command, packets, threats, signals, 
 
 RTX Zero mode: `?rtx=1` — Aqua chrome, cache-first refresh.
 
+## Final_Eye 1.0 — ✅
+
+Sovereign robotics vision: [Final_Eye v1.0.0](https://github.com/ZacharyGeurts/Final_Eye) at `http://127.0.0.1:9479/ops`.
+
+ZOCRSM1 + GRKMF1/GVC1 · silent capture · Grok16 field_opt · Queen/Hostess/ZAC · code seal.
+
+Full chapter: [Ch 11 web — Final_Eye section](https://zacharygeurts.github.io/Field_Primer/chapters/11-observability.html#final-eye-10).
+
 ## Week-one operator lab
 
 1. Run `./linux.sh run` (AMOURANTHRTX) or `./nexus.sh` (NEXUS)

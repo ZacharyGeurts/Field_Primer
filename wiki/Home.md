@@ -1,43 +1,56 @@
-# Field Technology v5 — Serious Book · Textbook of 2026
+# Field Technology v5 — Operator Textbook
 
-**22 chapters · hand-written on the website · Queen · KILROY · sovereign time**
+**22 chapter files · 14-chapter technical spine · honesty-labeled manuscript**
 
 > Reality is 3D. Time is linear. Energy can be moved.
 
-**Web (the book):** [GitHub Pages](https://zacharygeurts.github.io/Field_Primer/)
-
+**Web (the book):** [GitHub Pages](https://zacharygeurts.github.io/Field_Primer/)  
 **Wiki:** quick reference — full prose lives on the site.
 
 ---
 
-## Start here
+## Start here (mandatory)
 
-**[Chapter 01 — Preface](https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html)**
+1. **[Read first — publisher gate](https://zacharygeurts.github.io/Field_Primer/read-first.html)** — axioms, honesty, rocks, spine (~3 min)
+2. **[Chapter 01 — Preface](https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html)** — operator map, validation, illustration theory
 
-Us · God as Truth, Math, Existence · what a field is · how to read this book.
+Wiki: [Read-First-Publisher-Gate](Read-First-Publisher-Gate)
 
 ---
 
-## 22 chapters on the site
+## Technical spine (14 core)
 
-| # | Title |
-|---|--------|
-| 01 | [Preface — Us, God, Truth & Math](https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html) |
-| 02–12 | Foundations through honesty — fields, thermo, entropy, NEXUS, engine, die, FCC, spiderweb, observability, rocks |
-| 13–15 | Landauer · Shannon · Maxwell deep dives |
-| 16–18 | Love · God · Operator Covenant |
-| 19 | [Sovereign Time Sync](https://zacharygeurts.github.io/Field_Primer/chapters/19-sovereign-time.html) |
-| 20 | [Public Services 2026](https://zacharygeurts.github.io/Field_Primer/chapters/20-public-services.html) |
-| 21 | [Field Browser Queen](https://zacharygeurts.github.io/Field_Primer/chapters/21-field-browser-queen.html) |
-| 22 | [Glossary](https://zacharygeurts.github.io/Field_Primer/chapters/22-glossary.html) |
+| Part | Chapters | Topic |
+|------|----------|-------|
+| **I Foundations** | 02–06 | Fields, thermo, entropy, packet field, RF |
+| **II Implementation** | 07–11 | GPU engine, Field Die, FCC, spiderweb, observability |
+| **III Defense** | 12, 19–20 | Honesty capstone, sovereign time, DNS/DHCP |
+| **IV Operator** | 21 | Queen browser gates |
+
+## Appendices (bracketed — not in proofs)
+
+| Appendix | Chapters | Label |
+|----------|----------|-------|
+| Creditor deep dives | 13–15 | Math history beside code |
+| Sacred track | 16–18 | **Philosophy** — optional |
+| Glossary + rocks | 22 | Reference |
+| Horizon | 22 `#horizon` | Proposed — not promised |
 
 [Full chapter grid](https://zacharygeurts.github.io/Field_Primer/#chapters)
 
 ---
 
-## Wiki pages (quick reference)
+## Honesty labels
 
-Same topics, shorter — use when you need a lookup table, not a lecture.
+| Label | Use |
+|-------|-----|
+| **Implemented** | Grep / binding / jsonl today |
+| **Metaphor** | Proxy, visual, architecture shorthand |
+| **Philosophy** | Operator discipline, sacred, edition name |
+| **Visual** | Art — not instrumentation |
+
+*Textbook of 2026* = edition ambition (**Philosophy**), not accreditation.  
+Queen “robot brain” = gate+recall metaphor (**Metaphor**), not a DARPA deliverable.
 
 ---
 
@@ -47,4 +60,5 @@ Same topics, shorter — use when you need a lookup table, not a lecture.
 |------|------|
 | [AMOURANTHRTX](https://github.com/ZacharyGeurts/AMOURANTHRTX) | GPU fabric · Field Die |
 | [NEXUS-Shield](https://github.com/ZacharyGeurts/NEXUS-Shield) | Packet field · panel |
+| [Final_Eye](https://github.com/ZacharyGeurts/Final_Eye) | Sovereign vision v1.0.0 · :9479 Field Ops |
 | **Field Primer** | This textbook |
