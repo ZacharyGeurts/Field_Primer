@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "edition": "Field Technology v3",
+  "edition": "Field Technology v3 — Textbook of 2026",
   "axioms": [
     "Reality is 3D.",
     "Time is linear.",
@@ -8,7 +8,6 @@
   ],
   "base": "assets/images",
   "raw_github": "https://raw.githubusercontent.com/ZacharyGeurts/Field_Primer/main/assets/images",
-  "meme_corpus": "https://github.com/ZacharyGeurts/memes",
   "figures": {
     "hero": {
       "file": "field-primer-hero.jpg",
@@ -51,8 +50,8 @@
     "01": {
       "slug": "01-preface",
       "title": "The Weapon You Already Hold",
-      "image": "v3/meme-ref/Swords.jpg",
-      "alt": "Ace of Swords — clarity through the field",
+      "image": "v3/science/ch01-scalar-field.jpg",
+      "alt": "Scalar field heatmap — continuous state over R²",
       "accent": "phi",
       "wiki": "01-Preface-What-Is-A-Field"
     },

@@ -1,23 +1,22 @@
-# Field Technology v3 — Home
+# Field Technology v3 — Textbook of 2026
 
-**Offense. Defense. Operator truth. We do not hide the rocks.**
+**Serious math and science. We do not hide the rocks.**
 
-> **Subtext:** Reality is 3D. Time is linear. Energy can be moved.
+> Reality is 3D. Time is linear. Energy can be moved.
+
+**Web:** [GitHub Pages](https://zacharygeurts.github.io/Field_Primer/)
+
+![v3 cover](https://raw.githubusercontent.com/ZacharyGeurts/Field_Primer/main/assets/images/v3/field-technology-v3-cover-front.jpg)
 
 ---
 
-## What v3 is
+## Researchers who prompted discoveries
 
-The illustrated sovereign manual — rewritten under **serious terms**:
+**Science:** Maxwell · Landauer · Shannon · CFL · Boltzmann · Tesla (metaphor) · von Neumann · Turing
 
-- The greatest weapon is **field literacy** you already carry
-- **Defense** — NEXUS packet field, entropy oracle, local panel
-- **Offense** — AMOURANTHRTX dispatch, fabric, Field Die
-- **Meme corpus** — [ZacharyGeurts/memes](https://github.com/ZacharyGeurts/memes) honored as operator culture
+**Collaborators:** Zachary Robert Geurts · Grok (xAI) · Nick · Amouranth (namesake)
 
-**Web:** [Field Primer GitHub Pages](https://zacharygeurts.github.io/Field_Primer/)
-
-![v3 cover](https://raw.githubusercontent.com/ZacharyGeurts/Field_Primer/main/assets/images/v3/field-technology-v3-cover-front.jpg)
+→ [Researchers & Acknowledgments](Researchers-And-Acknowledgments) · [Full credits on GitHub](https://github.com/ZacharyGeurts/Field_Primer/blob/main/RESEARCH-CREDITS.md)
 
 ---
 
@@ -27,33 +26,11 @@ The illustrated sovereign manual — rewritten under **serious terms**:
 |----------|---------|
 | Everyone | [01 — The Weapon You Already Hold](01-Preface-What-Is-A-Field) |
 | Physicist | [03 — Thermodynamics](03-Thermodynamics-In-The-Engine) |
-| Engineer | [07 — GPU Engine](07-GPU-Field-Engine) → [08 — Field Die](08-Field-Die-And-Data-Bus) |
+| Engineer | [07 — GPU Engine](07-GPU-Field-Engine) |
 | Skeptic | [12 — The Rocks We Do Not Hide](12-Operator-Reality-Vs-Theory) |
 
-- [Gallery](https://zacharygeurts.github.io/Field_Primer/gallery.html)
+- [Science Gallery](https://zacharygeurts.github.io/Field_Primer/gallery.html)
 - [v3 manifest](https://github.com/ZacharyGeurts/Field_Primer/blob/main/FIELD-TECHNOLOGY-V3.md)
-- [Image system](IMAGE-SYSTEM)
-
----
-
-## Three axioms in the stack
-
-| Axiom | Implementation |
-|-------|----------------|
-| Reality is 3D | Texels, die map, packet positions |
-| Time is linear | `TotalTime::seal()`, per-frame thermo |
-| Energy can be moved | Phi/Thermo/Flow coupling |
-
----
-
-## The rocks
-
-| Claim | Reality |
-|-------|---------|
-| Packet field sees all | Local sockets + heuristics |
-| GPU Landauer | Proxy integral |
-| RF planetary shell | Visual only |
-| Meme/tarot art | Culture, not API |
 
 ---
 
@@ -61,7 +38,6 @@ The illustrated sovereign manual — rewritten under **serious terms**:
 
 | Repo | Role |
 |------|------|
-| [AMOURANTHRTX](https://github.com/ZacharyGeurts/AMOURANTHRTX) | Vulkan Field Die · fabric |
+| [AMOURANTHRTX](https://github.com/ZacharyGeurts/AMOURANTHRTX) | GPU fabric · Field Die |
 | [NEXUS-Shield](https://github.com/ZacharyGeurts/NEXUS-Shield) | Packet field · panel |
-| [memes](https://github.com/ZacharyGeurts/memes) | Visual corpus |
-| **Field Primer** | This wiki + site |
+| **Field Primer** | This textbook |

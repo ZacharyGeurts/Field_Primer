@@ -41,7 +41,7 @@ a:hover { color: var(--gold); text-decoration: underline; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: center/cover no-repeat url("../assets/images/field-primer-hero.jpg");
+  background: center/cover no-repeat url("../assets/images/v3/science/textbook-hero.jpg");
   filter: saturate(1.1) brightness(0.55);
 }
 

@@ -1,15 +1,15 @@
-# Field Technology v3
+# Field Technology v3 — Textbook of 2026
 
-**Offense. Defense. Operator truth.**
+**Serious mathematics and science for sovereign field technology.**
 
 [![Pages](https://img.shields.io/badge/docs-GitHub%20Pages-38bdf8)](https://zacharygeurts.github.io/Field_Primer/)
-[![Edition](https://img.shields.io/badge/edition-v3-a78bfa)](FIELD-TECHNOLOGY-V3.md)
+[![Edition](https://img.shields.io/badge/edition-Textbook%202026-a78bfa)](FIELD-TECHNOLOGY-V3.md)
+[![Credits](https://img.shields.io/badge/research-credits-f0d060)](RESEARCH-CREDITS.md)
 [![Wiki](https://img.shields.io/badge/manual-Wiki-f0d060)](https://github.com/ZacharyGeurts/Field_Primer/wiki)
-[![Memes](https://img.shields.io/badge/visual-memes%20corpus-f59e0b)](https://github.com/ZacharyGeurts/memes)
 
 > **Subtext:** Reality is 3D. Time is linear. Energy can be moved.
 
-The greatest offensive and defensive weapon you will know is **field literacy** — and you already carry it. v3 is the serious illustrated manual: picture-led chapters, meme corpus honored, **every rock labeled**.
+The Field Primer teaches continuous fields, thermodynamics, entropy, and operator reality — with generated textbook figures, honesty labels, and **full research attribution**.
 
 ---
 
@@ -17,39 +17,37 @@ The greatest offensive and defensive weapon you will know is **field literacy** 
 
 - **Web:** https://zacharygeurts.github.io/Field_Primer/
 - **Gallery:** https://zacharygeurts.github.io/Field_Primer/gallery.html
-- **Chapter 1:** https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html
+- **Research credits:** [RESEARCH-CREDITS.md](RESEARCH-CREDITS.md)
 - **v3 manifest:** [FIELD-TECHNOLOGY-V3.md](FIELD-TECHNOLOGY-V3.md)
-- **Wiki:** https://github.com/ZacharyGeurts/Field_Primer/wiki
 
 ![v3 cover](assets/images/v3/field-technology-v3-cover-front.jpg)
 
 ---
 
+## Researchers who prompted these discoveries
+
+**Science:** Maxwell · Clausius/Boltzmann · Landauer · Shannon · CFL · Tesla (metaphor) · von Neumann · Turing
+
+**Collaborators:** Zachary Robert Geurts (architect) · Grok/xAI (textbook co-documentation) · Nick (builder) · Amouranth (engine namesake)
+
+→ [Full credits](RESEARCH-CREDITS.md)
+
+---
+
 ## Stack
 
-| Layer | Repository | v3 role |
-|-------|------------|---------|
-| GPU fabric & Field Die | [AMOURANTHRTX](https://github.com/ZacharyGeurts/AMOURANTHRTX) | **Offense** — dispatch, fabric, die |
-| Network & panel | [NEXUS-Shield](https://github.com/ZacharyGeurts/NEXUS-Shield) | **Defense** — packet field, panel |
-| **This manual** | Field Primer | Teach · grep · hide nothing |
-| Visual culture | [memes](https://github.com/ZacharyGeurts/memes) | Tarot suits, operator refs |
+| Layer | Repository | Role |
+|-------|------------|------|
+| GPU fabric & Field Die | [AMOURANTHRTX](https://github.com/ZacharyGeurts/AMOURANTHRTX) | Dispatch · fabric · die |
+| Network & panel | [NEXUS-Shield](https://github.com/ZacharyGeurts/NEXUS-Shield) | Packet field · panel |
+| **This textbook** | Field Primer | Teach · attribute · hide nothing |
 
 ---
 
-## The rocks (we do not hide them)
-
-- Packet field = **local** sockets + heuristics  
-- Landauer in-engine = **proxy**, not lab calorimetry  
-- Planetary weave = **visual** shader  
-- Meme art = **culture**, not API authority  
-
-Full table: [Chapter 12](https://zacharygeurts.github.io/Field_Primer/chapters/12-reality-theory.html)
-
----
-
-## Rebuild
+## Rebuild figures
 
 ```bash
+python3 scripts/generate-textbook-images.py
 python3 scripts/generate-v3-covers.py
 python3 scripts/build-chapters.py
 ```
@@ -58,4 +56,4 @@ python3 scripts/build-chapters.py
 
 ## License
 
-**CC BY-NC-SA 4.0** — see [LICENSE](LICENSE).
+**CC BY-NC-SA 4.0** — cite original researchers for Landauer/Shannon in academic work. See [LICENSE](LICENSE).

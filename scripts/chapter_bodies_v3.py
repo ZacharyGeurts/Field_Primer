@@ -16,7 +16,10 @@ CHAPTER_BODY: dict[str, str] = {
 <tr><td>Packet field</td><td><span class="tag impl">Defense</span></td><td>NEXUS · local perimeter meaning</td></tr>
 </tbody></table>
 <p>Labels: <span class="tag impl">Implemented</span> <span class="tag meta">Metaphor</span> <span class="tag phil">Philosophy</span> <span class="tag vis">Visual</span></p>
-<figure class="figure"><img src="../assets/images/v3/meme-ref/Swords.jpg" alt="Ace of Swords — clarity through the field" loading="lazy" /><figcaption>Operator corpus ref — Ace of Swords: cut through illusion. Meme asset from ZacharyGeurts/memes.</figcaption></figure>
+<h3>Research lineage (who prompted this chapter)</h3>
+<p>Maxwell's field formulation and von Neumann's stored-program model prompted treating GPU images and guest RAM as <em>addressable physical state</em> — not animation. Landauer and Shannon arrive in Chapters 3–4. Full credits: <a href="https://github.com/ZacharyGeurts/Field_Primer/blob/main/RESEARCH-CREDITS.md">RESEARCH-CREDITS.md</a>.</p>
+<p class="muted">Collaborators: <strong>Zachary Robert Geurts</strong> (architect), <strong>Grok/xAI</strong> (textbook build), <strong>Nick</strong> (operator build), <strong>Amouranth</strong> (engine namesake).</p>
+<figure class="figure"><img src="../assets/images/v3/science/ch01-scalar-field.jpg" alt="Scalar field heatmap with axes" loading="lazy" /><figcaption>Figure 1.1 — Scalar field Φ(x,y): continuous state over addressable space. Textbook of 2026.</figcaption></figure>
 """,
     "02": """
 <p>Chapter 2 maps the <strong>three dimensions of state</strong> — the v3 reading of “Reality is 3D.” Not cosmology. Texels, die bytes, and packet sentences occupying space you can address.</p>
@@ -43,7 +46,7 @@ CHAPTER_BODY: dict[str, str] = {
 <h3>CFL guard</h3>
 <div class="eq">waveCFL = c·Δt/Δx ≤ 1 · thermoCFL = α·Δt/Δx² ≤ 1</div>
 <p class="tag meta">Body-temperature seeding is simulation flavor — labeled, not hidden.</p>
-<figure class="figure"><img src="../assets/images/v3/meme-ref/Homunculus.png" alt="Homunculus — energy contained and moved" loading="lazy" /><figcaption>Corpus ref — contained energy in a vessel. Alchemical meme; not a lab photo.</figcaption></figure>
+<figure class="figure"><img src="../assets/images/v3/science/ch03-energy-transfer.jpg" alt="Coupled Phi Thermo Flow channels" loading="lazy" /><figcaption>Figure 3.2 — Energy transfer across coupled channels; host CFL guards linear time steps.</figcaption></figure>
 """,
     "04": """
 <p>Entropy is the <strong>receipt</strong> that time ran forward. Two engines, one word — we say both out loud.</p>
@@ -146,7 +149,7 @@ RTX_PROBES=1</pre>
 <tr><td>Packet field sees everything</td><td>Local sockets + heuristics</td><td><span class="tag impl">Implemented</span></td></tr>
 <tr><td>RF planetary shell</td><td>Visual shader layer</td><td><span class="tag vis">Visual</span></td></tr>
 <tr><td>Landauer joules from GPU</td><td>Proxy integral</td><td><span class="tag meta">Metaphor</span></td></tr>
-<tr><td>Meme/tarot figures</td><td>Teaching culture, not API spec</td><td><span class="tag vis">Visual</span></td></tr>
+<tr><td>Shader art / figures</td><td>Generated schematic or visual aid</td><td><span class="tag vis">Visual</span></td></tr>
 </tbody></table>
 <div class="callout axiom"><strong>Subtext:</strong> Reality is 3D. Time is linear. Energy can be moved. Everything else is implementation detail with a label.</div>
 <p>What you can <code>grep</code>, <code>set</code>, and screenshot is real. What sounds like cosmology is often a knob with a poetic name. <strong>Enjoy the field — honestly.</strong></p>

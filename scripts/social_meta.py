@@ -7,10 +7,10 @@ import html
 SITE = "https://zacharygeurts.github.io/Field_Primer"
 OG_IMAGE = f"{SITE}/assets/images/og-image.jpg"
 TWITTER_SITE = "@ZacharyGeurts"
-DEFAULT_TITLE = "Field Technology v3 — Offense, Defense, Operator Truth"
+DEFAULT_TITLE = "Field Technology v3 — Textbook of 2026"
 DEFAULT_DESC = (
     "Reality is 3D. Time is linear. Energy can be moved. "
-    "The illustrated sovereign manual — serious terms, honest rocks, meme corpus honored."
+    "Serious mathematics and science for fields, thermodynamics, and operator reality."
 )
 
 
