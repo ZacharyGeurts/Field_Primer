@@ -21,7 +21,13 @@ Field Primer teaches **Fields**, **Thermodynamics**, **Entropy**, and **operator
 | Curious human | [01 — Preface](01-Preface-What-Is-A-Field) → [05 — Packet Field](05-Packet-Field) |
 | Skeptic | [12 — Operator Reality vs Theory](12-Operator-Reality-Vs-Theory) |
 
-**Web edition:** [Field Primer GitHub Pages](https://zacharygeurts.github.io/Field_Primer/)
+**Web edition (picture-led):** [Field Primer GitHub Pages](https://zacharygeurts.github.io/Field_Primer/)
+
+![Cover](https://raw.githubusercontent.com/ZacharyGeurts/Field_Primer/main/assets/images/field-primer-hero.jpg)
+
+- **[Picture Gallery](https://zacharygeurts.github.io/Field_Primer/gallery.html)** — visual atlas
+- **[Chapter 1 (illustrated)](https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html)** — start here on the web
+- **[Image system](IMAGE-SYSTEM)** — how figures map to chapters
 
 ---
 

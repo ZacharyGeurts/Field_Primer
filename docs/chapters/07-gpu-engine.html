@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7 — GPU Field Engine · Field Primer</title>
+  <link rel="stylesheet" href="../css/field-primer.css" />
+  <link rel="stylesheet" href="../css/chapters.css" />
+</head>
+<body class="chapter-page accent-phi">
+  <nav class="top"><div class="inner">
+    <a class="logo" href="../index.html">FIELD PRIMER</a>
+    <ul>
+      <li><a href="../gallery.html">Gallery</a></li>
+      <li><a href="../index.html#chapters">Chapters</a></li>
+      <li><a href="https://github.com/ZacharyGeurts/Field_Primer/wiki/07-GPU-Field-Engine">Wiki</a></li>
+    </ul>
+  </div></nav>
+  <header class="chapter-hero" style="background-image:url('../assets/images/chapters/ch07-gpu-engine.jpg')">
+    <div class="chapter-hero-overlay"></div>
+    <div class="chapter-hero-content">
+      <p class="eyebrow">Chapter 7</p>
+      <h1>GPU Field Engine</h1>
+    </div>
+  </header>
+  <main class="chapter-main">
+    <nav class="chapter-nav"><a class="btn secondary" href="06-rf-signals.html">← Ch 6</a> <a class="btn" href="08-field-die.html">Ch 8 →</a></nav>
+    
+<p>C++ opens the window. The GPU runs the world. Default <code>./linux.sh run</code> launches the <strong>Field Die</strong> (<code>x86.comp</code>), not a decorative raymarch demo.</p>
+<figure class="figure"><img src="../assets/images/chapters/ch07-gpu-engine.jpg" alt="GPU engine" loading="lazy" /><figcaption>Figure 7.1 — Thin host, fat GPU — dispatch spine.</figcaption></figure>
+<pre class="eq">main → navigator_main() → RayCanvas → Pipeline::dispatch_canvas() → vkCmdDispatch</pre>
+<h3>Descriptor layout (x86)</h3>
+<table><thead><tr><th>Binding</th><th>Resource</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>HDR output</td></tr>
+<tr><td>1</td><td>FieldX86Die SSBO</td></tr>
+<tr><td>2</td><td>ThermoAccountant</td></tr>
+<tr><td>8–10</td><td>Phi, Thermo, Flow</td></tr>
+</tbody></table>
+<p><code>TotalTime::seal()</code> provides monotonic session clock — frame-rate drift cannot rewrite physics time.</p>
+
+    <nav class="chapter-nav bottom"><a class="btn secondary" href="06-rf-signals.html">← Ch 6</a> <a class="btn" href="08-field-die.html">Ch 8 →</a></nav>
+  </main>
+  <footer><p>Field Primer · CC BY-NC-SA 4.0 · <a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AmouranthRTX</a> engine branding</p></footer>
+</body>
+</html>

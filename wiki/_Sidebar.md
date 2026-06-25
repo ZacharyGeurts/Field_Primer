@@ -1,4 +1,6 @@
-**[🏠 Home](Home)**
+**[🏠 Home](Home)** · **[🖼 Gallery](https://zacharygeurts.github.io/Field_Primer/gallery.html)**
+
+- [Image System](IMAGE-SYSTEM)
 
 ### Foundations
 - [01 Preface — What Is a Field?](01-Preface-What-Is-A-Field)

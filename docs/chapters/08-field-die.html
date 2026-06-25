@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>8 — Field Die &amp; Data Bus · Field Primer</title>
+  <link rel="stylesheet" href="../css/field-primer.css" />
+  <link rel="stylesheet" href="../css/chapters.css" />
+</head>
+<body class="chapter-page accent-flow">
+  <nav class="top"><div class="inner">
+    <a class="logo" href="../index.html">FIELD PRIMER</a>
+    <ul>
+      <li><a href="../gallery.html">Gallery</a></li>
+      <li><a href="../index.html#chapters">Chapters</a></li>
+      <li><a href="https://github.com/ZacharyGeurts/Field_Primer/wiki/08-Field-Die-And-Data-Bus">Wiki</a></li>
+    </ul>
+  </div></nav>
+  <header class="chapter-hero" style="background-image:url('../assets/images/field-die.jpg')">
+    <div class="chapter-hero-overlay"></div>
+    <div class="chapter-hero-content">
+      <p class="eyebrow">Chapter 8</p>
+      <h1>Field Die &amp; Data Bus</h1>
+    </div>
+  </header>
+  <main class="chapter-main">
+    <nav class="chapter-nav"><a class="btn secondary" href="07-gpu-engine.html">← Ch 7</a> <a class="btn" href="09-fcc-tesla.html">Ch 9 →</a></nav>
+    
+<p>The Field Die is a 64 MiB guest linear map on the GPU — VGA at <code>0xB8000</code>, not DOSBox. <code>x86.comp</code> interprets guest instructions; <code>FieldX86Emu</code> assists when <code>ControlHostCpu</code> is set.</p>
+<figure class="figure"><img src="../assets/images/field-die.jpg" alt="Field die" loading="lazy" /><figcaption>Figure 8.1 — Guest RAM, holographic boundary, fabric channels.</figcaption></figure>
+<h3>data_bus[64] spine</h3>
+<table><thead><tr><th>Slots</th><th>Content</th></tr></thead>
+<tbody>
+<tr><td>[16–23]</td><td>Analog FCC floats</td></tr>
+<tr><td>[24–28]</td><td>ThermoAccountant mirrors</td></tr>
+<tr><td>[31, 34]</td><td>Tesla valve bias</td></tr>
+</tbody></table>
+<p><code>ZMM1024</code> tile cache at SSBO tail — fabric samples for HUD hex dumps.</p>
+
+    <nav class="chapter-nav bottom"><a class="btn secondary" href="07-gpu-engine.html">← Ch 7</a> <a class="btn" href="09-fcc-tesla.html">Ch 9 →</a></nav>
+  </main>
+  <footer><p>Field Primer · CC BY-NC-SA 4.0 · <a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AmouranthRTX</a> engine branding</p></footer>
+</body>
+</html>

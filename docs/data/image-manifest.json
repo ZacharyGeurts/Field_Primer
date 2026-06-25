@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "base": "assets/images",
+  "raw_github": "https://raw.githubusercontent.com/ZacharyGeurts/Field_Primer/main/assets/images",
+  "figures": {
+    "hero": {
+      "file": "field-primer-hero.jpg",
+      "alt": "Cosmic field fabric — Phi, Thermo, and Flow woven through space",
+      "caption": "Cover — sovereign field technology as continuous luminous state",
+      "chapter": null
+    },
+    "fabric-triple": {
+      "file": "fabric-triple.jpg",
+      "alt": "Three coupled fabric channels: Phi, Thermo, Flow",
+      "caption": "Analog fabric — bindings 8, 9, 10 on the GPU",
+      "chapter": "03"
+    },
+    "entropy": {
+      "file": "entropy-chapter.jpg",
+      "alt": "Entropy and thermodynamic accounting",
+      "caption": "Irreversibility — Landauer proxy vs Shannon oracle",
+      "chapter": "04"
+    },
+    "packet-field": {
+      "file": "packet-field.jpg",
+      "alt": "Packet field — local network flows as light trails",
+      "caption": "NEXUS packet field — TX/RX with operator meaning",
+      "chapter": "05"
+    },
+    "field-die": {
+      "file": "field-die.jpg",
+      "alt": "Field Die cross-section — guest RAM and holographic boundary",
+      "caption": "FieldX86Die — 64 MiB guest on the GPU",
+      "chapter": "08"
+    }
+  },
+  "chapters": {
+    "01": {
+      "slug": "01-preface",
+      "title": "Preface — What Is a Field?",
+      "image": "chapters/ch01-preface.jpg",
+      "alt": "Continuous scalar field waves in dark space",
+      "accent": "phi",
+      "wiki": "01-Preface-What-Is-A-Field"
+    },
+    "02": {
+      "slug": "02-fields-pixels-packets",
+      "title": "Fields: Pixels to Packets",
+      "image": "fabric-triple.jpg",
+      "alt": "Three field families converging",
+      "accent": "flow",
+      "wiki": "02-Fields-From-Pixels-To-Packets"
+    },
+    "03": {
+      "slug": "03-thermodynamics",
+      "title": "Thermodynamics in the Engine",
+      "image": "fabric-triple.jpg",
+      "alt": "Phi Thermo Flow coupled sheets",
+      "accent": "thermo",
+      "wiki": "03-Thermodynamics-In-The-Engine"
+    },
+    "04": {
+      "slug": "04-entropy",
+      "title": "Entropy: Receipts & Oracles",
+      "image": "entropy-chapter.jpg",
+      "alt": "Heat flowing into ordered lattice — entropy metaphor",
+      "accent": "thermo",
+      "wiki": "04-Entropy-Receipts-And-Oracles"
+    },
+    "05": {
+      "slug": "05-packet-field",
+      "title": "The Packet Field",
+      "image": "packet-field.jpg",
+      "alt": "Network packet flows between nodes",
+      "accent": "phi",
+      "wiki": "05-Packet-Field"
+    },
+    "06": {
+      "slug": "06-rf-signals",
+      "title": "RF, Signals, Planetary Weave",
+      "image": "chapters/ch06-planetary-weave.jpg",
+      "alt": "Planetary ionosphere and RF shell layers",
+      "accent": "flow",
+      "wiki": "06-RF-Signals-Planetary-Weave"
+    },
+    "07": {
+      "slug": "07-gpu-engine",
+      "title": "GPU Field Engine",
+      "image": "chapters/ch07-gpu-engine.jpg",
+      "alt": "Vulkan compute dispatch over layered silicon",
+      "accent": "phi",
+      "wiki": "07-GPU-Field-Engine"
+    },
+    "08": {
+      "slug": "08-field-die",
+      "title": "Field Die & Data Bus",
+      "image": "field-die.jpg",
+      "alt": "Field die and fabric layers",
+      "accent": "flow",
+      "wiki": "08-Field-Die-And-Data-Bus"
+    },
+    "09": {
+      "slug": "09-fcc-tesla",
+      "title": "FCC, Tesla Valve, Stability",
+      "image": "chapters/ch09-tesla-valve.jpg",
+      "alt": "Directional flow channel — Tesla valve metaphor",
+      "accent": "thermo",
+      "wiki": "09-FCC-Tesla-Stability"
+    },
+    "10": {
+      "slug": "10-spiderweb",
+      "title": "Hardware Spiderweb",
+      "image": "chapters/ch10-spiderweb.jpg",
+      "alt": "Luminous node graph on chip surface",
+      "accent": "phi",
+      "wiki": "10-Hardware-Spiderweb"
+    },
+    "11": {
+      "slug": "11-observability",
+      "title": "Observability & Operator Tools",
+      "image": "chapters/ch11-observability.jpg",
+      "alt": "Glowing operator log terminal",
+      "accent": "flow",
+      "wiki": "11-Observability-Operator-Tools"
+    },
+    "12": {
+      "slug": "12-reality-theory",
+      "title": "Operator Reality vs Theory",
+      "image": "chapters/ch12-honesty.jpg",
+      "alt": "Poetic glow versus precise schematic — honesty mirror",
+      "accent": "thermo",
+      "wiki": "12-Operator-Reality-Vs-Theory"
+    }
+  }
+}

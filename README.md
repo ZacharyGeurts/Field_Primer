@@ -24,9 +24,14 @@ Written for **physicists**, **engineers**, and **everyone** — same facts, thre
 
 ## Read it
 
-- **Web (gorgeous):** https://zacharygeurts.github.io/Field_Primer/
+- **Web (picture-led):** https://zacharygeurts.github.io/Field_Primer/
+- **Gallery:** https://zacharygeurts.github.io/Field_Primer/gallery.html
+- **Illustrated chapters:** https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html
 - **Wiki (lifetime build):** https://github.com/ZacharyGeurts/Field_Primer/wiki
-- **Chapters in repo:** [`wiki/`](wiki/) — sync source for the GitHub Wiki
+
+### Picture system
+
+Each chapter opens on **generated art** paired with expanded prose. Manifest: `docs/data/image-manifest.json`. Rebuild: `python3 scripts/build-chapters.py`.
 
 ---
 

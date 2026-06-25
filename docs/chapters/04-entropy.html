@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4 — Entropy: Receipts &amp; Oracles · Field Primer</title>
+  <link rel="stylesheet" href="../css/field-primer.css" />
+  <link rel="stylesheet" href="../css/chapters.css" />
+</head>
+<body class="chapter-page accent-thermo">
+  <nav class="top"><div class="inner">
+    <a class="logo" href="../index.html">FIELD PRIMER</a>
+    <ul>
+      <li><a href="../gallery.html">Gallery</a></li>
+      <li><a href="../index.html#chapters">Chapters</a></li>
+      <li><a href="https://github.com/ZacharyGeurts/Field_Primer/wiki/04-Entropy-Receipts-And-Oracles">Wiki</a></li>
+    </ul>
+  </div></nav>
+  <header class="chapter-hero" style="background-image:url('../assets/images/entropy-chapter.jpg')">
+    <div class="chapter-hero-overlay"></div>
+    <div class="chapter-hero-content">
+      <p class="eyebrow">Chapter 4</p>
+      <h1>Entropy: Receipts &amp; Oracles</h1>
+    </div>
+  </header>
+  <main class="chapter-main">
+    <nav class="chapter-nav"><a class="btn secondary" href="03-thermodynamics.html">← Ch 3</a> <a class="btn" href="05-packet-field.html">Ch 5 →</a></nav>
+    
+<p><code>ThermoAccountant</code> at Vulkan binding <strong>2</strong> writes an entropy ledger every <code>dispatch_canvas()</code>. NEXUS runs a separate <strong>Shannon oracle</strong> on files. Same word — different layers.</p>
+<figure class="figure"><img src="../assets/images/entropy-chapter.jpg" alt="Entropy chapter art" loading="lazy" /><figcaption>Figure 4.1 — Irreversibility: fabric floor, frame proxy, file randomness.</figcaption></figure>
+<h3>Landauer (theory)</h3>
+<div class="eq">E_min = k_B T ln 2</div>
+<p class="tag meta">In-engine <code>entropyThisFrame</code> is a proxy integral — not joules from nvidia-smi.</p>
+<h3>Shannon (NEXUS)</h3>
+<div class="eq">H = −Σ p_i log₂ p_i</div>
+<p>High H suggests packed, encrypted, or obfuscated payloads. Daemon thresholds tune calm / alert / storm polling.</p>
+<h3>Operator grep</h3>
+<pre class="eq">./linux.sh run 2>&1 | tee run.log
+grep -E 'THERMO|entropy|Boundary|prevMaint' run.log</pre>
+
+    <nav class="chapter-nav bottom"><a class="btn secondary" href="03-thermodynamics.html">← Ch 3</a> <a class="btn" href="05-packet-field.html">Ch 5 →</a></nav>
+  </main>
+  <footer><p>Field Primer · CC BY-NC-SA 4.0 · <a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AmouranthRTX</a> engine branding</p></footer>
+</body>
+</html>

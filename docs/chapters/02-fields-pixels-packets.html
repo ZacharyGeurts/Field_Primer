@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2 — Fields: Pixels to Packets · Field Primer</title>
+  <link rel="stylesheet" href="../css/field-primer.css" />
+  <link rel="stylesheet" href="../css/chapters.css" />
+</head>
+<body class="chapter-page accent-flow">
+  <nav class="top"><div class="inner">
+    <a class="logo" href="../index.html">FIELD PRIMER</a>
+    <ul>
+      <li><a href="../gallery.html">Gallery</a></li>
+      <li><a href="../index.html#chapters">Chapters</a></li>
+      <li><a href="https://github.com/ZacharyGeurts/Field_Primer/wiki/02-Fields-From-Pixels-To-Packets">Wiki</a></li>
+    </ul>
+  </div></nav>
+  <header class="chapter-hero" style="background-image:url('../assets/images/fabric-triple.jpg')">
+    <div class="chapter-hero-overlay"></div>
+    <div class="chapter-hero-content">
+      <p class="eyebrow">Chapter 2</p>
+      <h1>Fields: Pixels to Packets</h1>
+    </div>
+  </header>
+  <main class="chapter-main">
+    <nav class="chapter-nav"><a class="btn secondary" href="01-preface.html">← Ch 1</a> <a class="btn" href="03-thermodynamics.html">Ch 3 →</a></nav>
+    
+<p>Fields appear at three scales in the sovereign stack — from texels on the GPU to packets on the wire. Understanding the scale prevents category errors (treating a shader metaphor as a spectrum analyzer).</p>
+<h3>GPU fabric path</h3>
+<pre class="eq">RayCanvas → createAnalogFieldFabric() → CANVAS.comp / x86.comp → hardwareFabric mirror</pre>
+<p>The host <em>never</em> runs a CPU PDE solver on Phi/Thermo/Flow. Evolution is compute-shader work each dispatch.</p>
+<h3>Field Die path</h3>
+<p><code>FieldX86Die</code> holds 64 MiB guest linear map, VGA at <code>0xB8000</code>, C mirror at <code>0x01000000</code>. Guest RAM is where DOS lives; <code>data_bus[64]</code> is the dashboard.</p>
+<h3>Packet field path</h3>
+<p>NEXUS turns sockets into sentences: process path, port habit, harm candidates, permanent KILL archive. Panel is the window; <code>field jsonl</code> is the library.</p>
+
+    <nav class="chapter-nav bottom"><a class="btn secondary" href="01-preface.html">← Ch 1</a> <a class="btn" href="03-thermodynamics.html">Ch 3 →</a></nav>
+  </main>
+  <footer><p>Field Primer · CC BY-NC-SA 4.0 · <a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AmouranthRTX</a> engine branding</p></footer>
+</body>
+</html>

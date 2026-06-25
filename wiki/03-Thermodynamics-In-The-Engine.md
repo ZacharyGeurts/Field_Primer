@@ -1,5 +1,9 @@
 # 03 — Thermodynamics in the Engine
 
+![Phi Thermo Flow fabric](https://raw.githubusercontent.com/ZacharyGeurts/Field_Primer/main/assets/images/fabric-triple.jpg)
+
+*Figure 3.0 — Coupled fabric at bindings 8–10. [Illustrated chapter →](https://zacharygeurts.github.io/Field_Primer/chapters/03-thermodynamics.html)*
+
 ## Why thermodynamics in a renderer?
 
 Every frame **destroys information** — noise injection, probes, diffusion steps. The engine tracks that cost like a power meter tracks joules. This is **accounting**, not a laboratory calorimeter.
