@@ -153,6 +153,7 @@ READER_ROOM_HTML = """  <!-- reader-room -->
         <div class="reader-room-cta">
           <a class="btn btn-reader-vanilla" href="chapters/01-preface.html?reader=1">Open Chapter 1 in reader</a>
           <a class="btn secondary" href="#chapters">Browse all 22 chapters</a>
+          <a class="btn secondary" href="https://github.com/ZacharyGeurts/Field_Primer/tree/main/pdf">PDF textbook (7 volumes)</a>
         </div>
       </div>
       <div class="reader-preview-wrap" aria-hidden="true">
