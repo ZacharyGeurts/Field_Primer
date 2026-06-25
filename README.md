@@ -9,7 +9,7 @@
 
 > **Subtext:** Reality is 3D. Time is linear. Energy can be moved.
 
-The Field Primer teaches continuous fields, thermodynamics, entropy, and operator reality — with generated textbook figures, honesty labels, and **full research attribution**.
+**18 longer chapters**, **creditor tribute pages** (portrait + love + God for each researcher), generated textbook figures, and **full research attribution**.
 
 ---
 
@@ -18,7 +18,8 @@ The Field Primer teaches continuous fields, thermodynamics, entropy, and operato
 - **Web:** https://zacharygeurts.github.io/Field_Primer/
 - **Gallery:** https://zacharygeurts.github.io/Field_Primer/gallery.html
 - **Research credits:** [RESEARCH-CREDITS.md](RESEARCH-CREDITS.md)
-- **v3 manifest:** [FIELD-TECHNOLOGY-V3.md](FIELD-TECHNOLOGY-V3.md)
+- **Creditors:** https://zacharygeurts.github.io/Field_Primer/creditors/
+- **v4 manifest:** [FIELD-TECHNOLOGY-V4.md](FIELD-TECHNOLOGY-V4.md)
 
 ![v3 cover](assets/images/v3/field-technology-v3-cover-front.jpg)
 
@@ -47,9 +48,7 @@ The Field Primer teaches continuous fields, thermodynamics, entropy, and operato
 ## Rebuild figures
 
 ```bash
-python3 scripts/generate-textbook-images.py
-python3 scripts/generate-v3-covers.py
-python3 scripts/build-chapters.py
+./scripts/build-site.sh
 ```
 
 ---

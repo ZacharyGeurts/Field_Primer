@@ -40,9 +40,10 @@ TEMPLATE = """<!DOCTYPE html>
     <div class="chapter-hero-content">
       <p class="eyebrow">Chapter {num} · Field Technology v4</p>
       <h1>{title}</h1>
+      {subtitle}
     </div>
   </header>
-  <main class="chapter-main">
+  <main class="chapter-main{preface_class}">
     <nav class="chapter-nav">{prev_link} {next_link}</nav>
     {body}
     <nav class="chapter-nav bottom">{prev_link} {next_link}</nav>
@@ -90,6 +91,10 @@ def main() -> None:
             ch["image"],
             ch.get("alt", ch["title"]),
         )
+        subtitle = ""
+        if ch.get("subtitle"):
+            subtitle = f'<p class="lead" style="margin-top:0.75rem">{html.escape(ch["subtitle"])}</p>'
+        preface_class = " preface-full" if num == 1 else ""
         html_out = TEMPLATE.format(
             num=num,
             title=html.escape(ch["title"]),
@@ -100,6 +105,8 @@ def main() -> None:
             prev_link=prev_link,
             next_link=next_link,
             social_meta=meta,
+            subtitle=subtitle,
+            preface_class=preface_class,
         )
         (OUT / f"{ch['slug']}.html").write_text(html_out, encoding="utf-8")
         print(f"wrote {ch['slug']}.html")
