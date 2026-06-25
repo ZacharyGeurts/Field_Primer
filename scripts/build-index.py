@@ -46,7 +46,7 @@ def chapter_card(key: str, ch: dict) -> str:
         short = short[:39] + "…"
     p = f'<p>{html.escape(blurb)}</p>' if blurb else ""
     return (
-        f'<a class="chapter-card" href="chapters/{slug}.html">'
+        f'<a class="chapter-card" href="chapters/{slug}.html?reader=1">'
         f'<img class="thumb" src="assets/images/{img}" alt="{alt}" loading="lazy" />'
         f'<span class="num">{num:02d}</span><h4>{short}</h4>{p}</a>'
     )
@@ -131,6 +131,60 @@ def patch_hero_lead(text: str) -> str:
     return text
 
 
+READER_ROOM_START = "  <!-- reader-room -->"
+READER_ROOM_END = "  <!-- /reader-room -->"
+
+READER_ROOM_HTML = """  <!-- reader-room -->
+  <section id="reader-room" class="reader-room" aria-labelledby="reader-room-heading">
+    <div class="reader-room-inner">
+      <div class="reader-room-copy">
+        <p class="eyebrow">Schools · home · any device</p>
+        <h2 id="reader-room-heading">Reading room — vanilla paper, your colors</h2>
+        <p>
+          Every chapter opens in <strong>full-screen reader mode</strong>: warm cream paper, brown ink, soft grain —
+          like a textbook page, not a tech demo. Tap <strong>Read</strong> on any chapter, or start below.
+          Customize paper, ink, accent, muted text, code blocks, typeface, and column width. Settings sync across chapters on this device.
+        </p>
+        <ul class="reader-room-features">
+          <li>Works on phone, tablet, and desktop — large touch targets, bottom-sheet settings on mobile</li>
+          <li><strong>Classroom</strong> preset: high-contrast cream paper for projectors and bright rooms</li>
+          <li>Keyboard: <kbd>+</kbd>/<kbd>−</kbd> size, <kbd>Esc</kbd> exit</li>
+        </ul>
+        <div class="reader-room-cta">
+          <a class="btn btn-reader-vanilla" href="chapters/01-preface.html?reader=1">Open Chapter 1 in reader</a>
+          <a class="btn secondary" href="#chapters">Browse all 22 chapters</a>
+        </div>
+      </div>
+      <div class="reader-preview-wrap" aria-hidden="true">
+        <span class="reader-preview-label">Your paper</span>
+        <div id="reader-room-preview">
+          <p class="reader-preview-title">Field Technology v5</p>
+          <p class="reader-preview-body">Reality is 3D. Time is linear. Energy can be moved.</p>
+          <span class="reader-preview-muted">Caption and muted text</span>
+          <code class="reader-preview-code">grep THERMO run.log</code>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /reader-room -->"""
+
+
+def patch_reader_room(text: str) -> str:
+    if READER_ROOM_START in text:
+        return re.sub(
+            rf"{re.escape(READER_ROOM_START)}.*?{re.escape(READER_ROOM_END)}",
+            READER_ROOM_HTML.strip(),
+            text,
+            count=1,
+            flags=re.DOTALL,
+        )
+    return text.replace(
+        "  </header>\n\n  <main>",
+        "  </header>\n\n" + READER_ROOM_HTML + "\n\n  <main>",
+        1,
+    )
+
+
 def patch_rocks_table(text: str) -> str:
     rows = master_rocks_index_rows().strip()
     return re.sub(
@@ -180,6 +234,7 @@ def main() -> None:
 
     text = patch_about_copy(text)
     text = patch_hero_lead(text)
+    text = patch_reader_room(text)
     text = patch_rocks_table(text)
     text = patch_reader_assets(text)
     text = patch_reader_cta(text)

@@ -82,6 +82,21 @@
       leading: 1.7,
       width: "42rem",
     },
+    classroom: {
+      name: "Classroom",
+      paper: "#fffef9",
+      ink: "#1a1a1a",
+      muted: "#4a4a4a",
+      accent: "#1d4ed8",
+      codeBg: "#f4f4f0",
+      codeInk: "#1e3a5f",
+      warmth: 4,
+      texture: 0.15,
+      font: "charter",
+      size: 1.125,
+      leading: 1.9,
+      width: "42rem",
+    },
   };
 
   const FONTS = {
@@ -106,6 +121,48 @@
     return window.matchMedia("(min-width: 769px) and (max-width: 1024px)").matches;
   }
 
+  function hexToRgb(hex) {
+    const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex || "");
+    if (!m) return { r: 46, g: 38, b: 28 };
+    return { r: parseInt(m[1], 16), g: parseInt(m[2], 16), b: parseInt(m[3], 16) };
+  }
+
+  function rgbToHex(r, g, b) {
+    const clamp = (n) => Math.max(0, Math.min(255, Math.round(n)));
+    return (
+      "#" +
+      [clamp(r), clamp(g), clamp(b)]
+        .map((x) => x.toString(16).padStart(2, "0"))
+        .join("")
+    );
+  }
+
+  function mixHex(a, b, t) {
+    const c = hexToRgb(a);
+    const d = hexToRgb(b);
+    return rgbToHex(c.r + (d.r - c.r) * t, c.g + (d.g - c.g) * t, c.b + (d.b - c.b) * t);
+  }
+
+  function paperIsDark(paper) {
+    const { r, g, b } = hexToRgb(paper);
+    const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    return lum < 0.45;
+  }
+
+  function deriveCompanionColors(paper, ink) {
+    const dark = paperIsDark(paper);
+    return {
+      muted: mixHex(ink, paper, dark ? 0.42 : 0.38),
+      codeBg: mixHex(paper, ink, dark ? 0.12 : 0.07),
+      codeInk: mixHex(ink, paper, dark ? 0.18 : 0.12),
+    };
+  }
+
+  function rgbaFromHex(hex, alpha) {
+    const { r, g, b } = hexToRgb(hex);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
   function mobileDefaults() {
     const base = { ...PRESETS.vanilla, preset: "vanilla" };
     if (isMobile()) {
@@ -118,14 +175,22 @@
     return base;
   }
 
+  function normalizeSettings(raw) {
+    const base = { ...PRESETS.vanilla, ...raw };
+    base.mutedManual = Boolean(raw.mutedManual);
+    base.codeBgManual = Boolean(raw.codeBgManual);
+    base.codeInkManual = Boolean(raw.codeInkManual);
+    return base;
+  }
+
   function loadSettings() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) return { ...PRESETS.vanilla, ...JSON.parse(raw) };
+      if (raw) return normalizeSettings(JSON.parse(raw));
     } catch (_) {
       /* ignore */
     }
-    return mobileDefaults();
+    return normalizeSettings(mobileDefaults());
   }
 
   function saveSettings(s) {
@@ -154,6 +219,23 @@
     r.style.setProperty("--reader-width", s.width);
     r.style.setProperty("--reader-warmth", String(s.warmth));
     r.style.setProperty("--reader-texture", String(s.texture));
+    r.style.setProperty("--reader-border", rgbaFromHex(s.ink, paperIsDark(s.paper) ? 0.22 : 0.14));
+  }
+
+  function applyDerivedColors(settings, keys) {
+    const derived = deriveCompanionColors(settings.paper, settings.ink);
+    if (!settings.mutedManual || keys.has("paper") || keys.has("ink")) {
+      settings.muted = derived.muted;
+      if (keys.has("paper") || keys.has("ink")) settings.mutedManual = false;
+    }
+    if (!settings.codeBgManual || keys.has("paper") || keys.has("ink")) {
+      settings.codeBg = derived.codeBg;
+      if (keys.has("paper") || keys.has("ink")) settings.codeBgManual = false;
+    }
+    if (!settings.codeInkManual || keys.has("paper") || keys.has("ink")) {
+      settings.codeInk = derived.codeInk;
+      if (keys.has("paper") || keys.has("ink")) settings.codeInkManual = false;
+    }
   }
 
   function wantsReader() {
@@ -285,10 +367,15 @@
 
     function setPreset(name) {
       if (!PRESETS[name]) return;
-      settings = { ...PRESETS[name], preset: name };
+      settings = normalizeSettings({ ...PRESETS[name], preset: name });
       applySettings(settings, shell);
       saveSettings(settings);
       syncSettingsUi();
+      updateHomePreview();
+    }
+
+    function resetVanilla() {
+      setPreset("vanilla");
     }
 
     function syncSettingsUi() {
@@ -304,6 +391,9 @@
       setVal("width", widthKey(settings.width));
       setVal("texture", settings.texture);
       setVal("warmth", settings.warmth);
+      setVal("muted", settings.muted);
+      setVal("codeBg", settings.codeBg);
+      setVal("codeInk", settings.codeInk);
     }
 
     function setVal(id, v) {
@@ -330,18 +420,28 @@
           if (key === "size" || key === "leading" || key === "texture" || key === "warmth") {
             val = parseFloat(val);
           }
+          const changed = new Set([key]);
           if (key === "width") {
             settings.width = WIDTHS[val] || WIDTHS.medium;
           } else {
             settings[key] = val;
           }
+          if (key === "muted") settings.mutedManual = true;
+          if (key === "codeBg") settings.codeBgManual = true;
+          if (key === "codeInk") settings.codeInkManual = true;
+          if (key === "paper" || key === "ink") {
+            applyDerivedColors(settings, changed);
+          }
           settings.preset = "custom";
           applySettings(settings, shell);
           saveSettings(settings);
+          syncSettingsUi();
+          updateHomePreview();
           settingsPanel.querySelectorAll(".reader-preset").forEach((b) => b.classList.remove("active"));
         });
       });
 
+      settingsPanel.querySelector('[data-action="reset-vanilla"]')?.addEventListener("click", resetVanilla);
       settingsPanel.querySelector(".reader-settings-close")?.addEventListener("click", closeSettings);
     }
 
@@ -391,10 +491,16 @@
 
     bindSettings();
     syncSettingsUi();
+    updateHomePreview();
 
     if (wantsReader()) {
       requestAnimationFrame(() => openReader());
     }
+  }
+
+  function boot() {
+    initHomeReaderRoom();
+    initChapterReader();
   }
 
   function buildSettingsHtml() {
@@ -423,6 +529,16 @@
         <input type="color" id="reader-accent" data-setting="accent" value="#8b6914" />
       </section>
       <section>
+        <label>Advanced ink</label>
+        <p class="reader-advanced-note">Muted and code colors auto-match paper and ink until you change them here.</p>
+        <label for="reader-muted" style="margin-top:0.5rem">Muted text</label>
+        <input type="color" id="reader-muted" data-setting="muted" value="#6b5e4f" />
+        <label for="reader-code-bg" style="margin-top:0.75rem">Code block background</label>
+        <input type="color" id="reader-code-bg" data-setting="codeBg" value="#ede6d6" />
+        <label for="reader-code-ink" style="margin-top:0.75rem">Code block text</label>
+        <input type="color" id="reader-code-ink" data-setting="codeInk" value="#5c4a32" />
+      </section>
+      <section>
         <label for="reader-font">Typeface</label>
         <select id="reader-font" data-setting="font">
           <option value="literata">Literata — book serif</option>
@@ -448,7 +564,39 @@
         <label for="reader-warmth" style="margin-top:0.75rem">Vanilla warmth</label>
         <input type="range" id="reader-warmth" data-setting="warmth" min="0" max="30" step="1" />
       </section>
+      <section>
+        <button type="button" class="reader-btn reader-reset-vanilla" data-action="reset-vanilla">↺ Reset to Vanilla</button>
+      </section>
     `;
+  }
+
+  function updateHomePreview() {
+    const preview = document.getElementById("reader-room-preview");
+    if (!preview) return;
+    const s = loadSettings();
+    preview.style.setProperty("--preview-paper", s.paper);
+    preview.style.setProperty("--preview-ink", s.ink);
+    preview.style.setProperty("--preview-accent", s.accent);
+    preview.style.setProperty("--preview-muted", s.muted);
+    preview.style.setProperty("--preview-code-bg", s.codeBg);
+    preview.style.setProperty("--preview-code-ink", s.codeInk);
+    preview.style.setProperty("--preview-texture", String(s.texture));
+    const label = preview.querySelector(".reader-preview-label");
+    if (label) {
+      label.textContent =
+        s.preset && s.preset !== "custom" && PRESETS[s.preset]
+          ? PRESETS[s.preset].name
+          : "Custom";
+    }
+  }
+
+  function initHomeReaderRoom() {
+    const room = document.getElementById("reader-room");
+    if (!room) return;
+    updateHomePreview();
+    window.addEventListener("storage", (e) => {
+      if (e.key === STORAGE_KEY) updateHomePreview();
+    });
   }
 
   function escapeHtml(s) {
@@ -458,8 +606,8 @@
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initChapterReader);
+    document.addEventListener("DOMContentLoaded", boot);
   } else {
-    initChapterReader();
+    boot();
   }
 })();
