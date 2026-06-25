@@ -3,35 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>3 — Thermodynamics in the Engine · Field Primer</title>
-  <meta name="description" content="Chapter 3: Thermodynamics in the Engine. Illustrated manual on sovereign field technology." />
+  <title>3 — Moving Energy — Thermodynamics · Field Technology v3</title>
+  <meta name="description" content="Chapter 3: Moving Energy — Thermodynamics. Field Technology v3 — serious terms, honest rocks." />
   <link rel="canonical" href="https://zacharygeurts.github.io/Field_Primer/chapters/03-thermodynamics.html" />
   <meta name="theme-color" content="#040810" />
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png" />
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Field Primer" />
-  <meta property="og:title" content="3 — Thermodynamics in the Engine · Field Primer" />
-  <meta property="og:description" content="Chapter 3: Thermodynamics in the Engine. Illustrated manual on sovereign field technology." />
+  <meta property="og:site_name" content="Field Technology v3" />
+  <meta property="og:title" content="3 — Moving Energy — Thermodynamics · Field Technology v3" />
+  <meta property="og:description" content="Chapter 3: Moving Energy — Thermodynamics. Field Technology v3 — serious terms, honest rocks." />
   <meta property="og:url" content="https://zacharygeurts.github.io/Field_Primer/chapters/03-thermodynamics.html" />
   <meta property="og:image" content="https://zacharygeurts.github.io/Field_Primer/assets/images/fabric-triple.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Phi Thermo Flow coupled sheets" />
+  <meta property="og:image:alt" content="Phi Thermo Flow — energy moved each tick" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ZacharyGeurts" />
   <meta name="twitter:creator" content="@ZacharyGeurts" />
-  <meta name="twitter:title" content="3 — Thermodynamics in the Engine · Field Primer" />
-  <meta name="twitter:description" content="Chapter 3: Thermodynamics in the Engine. Illustrated manual on sovereign field technology." />
+  <meta name="twitter:title" content="3 — Moving Energy — Thermodynamics · Field Technology v3" />
+  <meta name="twitter:description" content="Chapter 3: Moving Energy — Thermodynamics. Field Technology v3 — serious terms, honest rocks." />
   <meta name="twitter:image" content="https://zacharygeurts.github.io/Field_Primer/assets/images/fabric-triple.jpg" />
-  <meta name="twitter:image:alt" content="Phi Thermo Flow coupled sheets" />
+  <meta name="twitter:image:alt" content="Phi Thermo Flow — energy moved each tick" />
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
 </head>
 <body class="chapter-page accent-thermo">
   <nav class="top"><div class="inner">
-    <a class="logo" href="../index.html">FIELD PRIMER</a>
+    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v3-badge">v3</span></a>
     <ul>
+      <li><a href="../index.html#axioms">Axioms</a></li>
       <li><a href="../gallery.html">Gallery</a></li>
       <li><a href="../index.html#chapters">Chapters</a></li>
       <li><a href="https://github.com/ZacharyGeurts/Field_Primer/wiki/03-Thermodynamics-In-The-Engine">Wiki</a></li>
@@ -40,26 +41,29 @@
   <header class="chapter-hero" style="background-image:url('../assets/images/fabric-triple.jpg')">
     <div class="chapter-hero-overlay"></div>
     <div class="chapter-hero-content">
-      <p class="eyebrow">Chapter 3</p>
-      <h1>Thermodynamics in the Engine</h1>
+      <p class="eyebrow">Chapter 3 · Field Technology v3</p>
+      <h1>Moving Energy — Thermodynamics</h1>
     </div>
   </header>
   <main class="chapter-main">
     <nav class="chapter-nav"><a class="btn secondary" href="02-fields-pixels-packets.html">← Ch 2</a> <a class="btn" href="04-entropy.html">Ch 4 →</a></nav>
     
-<p>Every classic canvas dispatch evolves three coupled <code>R32G32B32A32</code> images. Thermodynamics here is <strong>accounting</strong> — tracking irreversibility like a power meter, not claiming laboratory calorimetry.</p>
-<figure class="figure inline-wide"><img src="../assets/images/fabric-triple.jpg" alt="Phi Thermo Flow fabric" loading="lazy" /><figcaption>Figure 3.1 — Coupled fabric channels at Vulkan bindings 8–10.</figcaption></figure>
+<p><strong>Energy can be moved.</strong> Chapter 3 is thermodynamics as honest accounting — tracking where irreversibility goes, not claiming you measured joules with a kitchen thermometer on the GPU.</p>
+<figure class="figure inline-wide"><img src="../assets/images/fabric-triple.jpg" alt="Phi Thermo Flow" loading="lazy" /><figcaption>Figure 3.1 — Coupled channels: moving energy between Phi, Thermo, Flow each tick.</figcaption></figure>
 <h3>Per-texel evolution</h3>
-<ol><li><strong>Phi</strong> — Laplacian wave step + <code>WaveSpeed</code> + propalactic forcing</li>
+<ol><li><strong>Phi</strong> — wave potential step · propalactic forcing</li>
 <li><strong>Thermo</strong> — diffusion, entropy floor, coupling to Phi</li>
-<li><strong>Flow</strong> — gradients mixed with <code>GateFidelity</code> + Tesla relaxation</li></ol>
+<li><strong>Flow</strong> — gradients · <code>GateFidelity</code> · Tesla relaxation</li></ol>
 <div class="eq">newPhi ∈ [-2, 2] · newThermo ∈ [0, 1.5] · newFlow ∈ [0, 1]</div>
-<h3>CFL guard (host)</h3>
+<h3>Time is linear (here)</h3>
+<p class="tag impl"><code>dispatch_canvas()</code> advances one tick at a time. <code>TotalTime::seal()</code> on the engine spine — frame-rate drift cannot rewrite physics time. Energy accounting is per-frame, not retroactive myth.</p>
+<h3>CFL guard</h3>
 <div class="eq">waveCFL = c·Δt/Δx ≤ 1 · thermoCFL = α·Δt/Δx² ≤ 1</div>
-<p class="tag impl">Implemented on classic canvases. Body-temperature seeding is normalized simulation flavor.</p>
+<p class="tag meta">Body-temperature seeding is simulation flavor — labeled, not hidden.</p>
+<figure class="figure"><img src="../assets/images/v3/meme-ref/Homunculus.png" alt="Homunculus — energy contained and moved" loading="lazy" /><figcaption>Corpus ref — contained energy in a vessel. Alchemical meme; not a lab photo.</figcaption></figure>
 
     <nav class="chapter-nav bottom"><a class="btn secondary" href="02-fields-pixels-packets.html">← Ch 2</a> <a class="btn" href="04-entropy.html">Ch 4 →</a></nav>
   </main>
-  <footer><p>Field Primer · CC BY-NC-SA 4.0 · <a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AmouranthRTX</a> engine branding</p></footer>
+  <footer><p>Field Technology v3 · CC BY-NC-SA 4.0 · We do not hide the rocks.</p></footer>
 </body>
 </html>

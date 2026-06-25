@@ -3,35 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>6 — RF, Signals, Planetary Weave · Field Primer</title>
-  <meta name="description" content="Chapter 6: RF, Signals, Planetary Weave. Illustrated manual on sovereign field technology." />
+  <title>6 — Signal Shell — RF &amp; Weave · Field Technology v3</title>
+  <meta name="description" content="Chapter 6: Signal Shell — RF &amp; Weave. Field Technology v3 — serious terms, honest rocks." />
   <link rel="canonical" href="https://zacharygeurts.github.io/Field_Primer/chapters/06-rf-signals.html" />
   <meta name="theme-color" content="#040810" />
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png" />
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Field Primer" />
-  <meta property="og:title" content="6 — RF, Signals, Planetary Weave · Field Primer" />
-  <meta property="og:description" content="Chapter 6: RF, Signals, Planetary Weave. Illustrated manual on sovereign field technology." />
+  <meta property="og:site_name" content="Field Technology v3" />
+  <meta property="og:title" content="6 — Signal Shell — RF &amp; Weave · Field Technology v3" />
+  <meta property="og:description" content="Chapter 6: Signal Shell — RF &amp; Weave. Field Technology v3 — serious terms, honest rocks." />
   <meta property="og:url" content="https://zacharygeurts.github.io/Field_Primer/chapters/06-rf-signals.html" />
   <meta property="og:image" content="https://zacharygeurts.github.io/Field_Primer/assets/images/chapters/ch06-planetary-weave.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Planetary ionosphere and RF shell layers" />
+  <meta property="og:image:alt" content="Visual RF shell — not instrumentation" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ZacharyGeurts" />
   <meta name="twitter:creator" content="@ZacharyGeurts" />
-  <meta name="twitter:title" content="6 — RF, Signals, Planetary Weave · Field Primer" />
-  <meta name="twitter:description" content="Chapter 6: RF, Signals, Planetary Weave. Illustrated manual on sovereign field technology." />
+  <meta name="twitter:title" content="6 — Signal Shell — RF &amp; Weave · Field Technology v3" />
+  <meta name="twitter:description" content="Chapter 6: Signal Shell — RF &amp; Weave. Field Technology v3 — serious terms, honest rocks." />
   <meta name="twitter:image" content="https://zacharygeurts.github.io/Field_Primer/assets/images/chapters/ch06-planetary-weave.jpg" />
-  <meta name="twitter:image:alt" content="Planetary ionosphere and RF shell layers" />
+  <meta name="twitter:image:alt" content="Visual RF shell — not instrumentation" />
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
 </head>
 <body class="chapter-page accent-flow">
   <nav class="top"><div class="inner">
-    <a class="logo" href="../index.html">FIELD PRIMER</a>
+    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v3-badge">v3</span></a>
     <ul>
+      <li><a href="../index.html#axioms">Axioms</a></li>
       <li><a href="../gallery.html">Gallery</a></li>
       <li><a href="../index.html#chapters">Chapters</a></li>
       <li><a href="https://github.com/ZacharyGeurts/Field_Primer/wiki/06-RF-Signals-Planetary-Weave">Wiki</a></li>
@@ -40,25 +41,25 @@
   <header class="chapter-hero" style="background-image:url('../assets/images/chapters/ch06-planetary-weave.jpg')">
     <div class="chapter-hero-overlay"></div>
     <div class="chapter-hero-content">
-      <p class="eyebrow">Chapter 6</p>
-      <h1>RF, Signals, Planetary Weave</h1>
+      <p class="eyebrow">Chapter 6 · Field Technology v3</p>
+      <h1>Signal Shell — RF &amp; Weave</h1>
     </div>
   </header>
   <main class="chapter-main">
     <nav class="chapter-nav"><a class="btn secondary" href="05-packet-field.html">← Ch 5</a> <a class="btn" href="07-gpu-engine.html">Ch 7 →</a></nav>
     
-<p>“RF” means three different things here. Keep them separated or you will argue with a shader about ionospheric physics.</p>
-<figure class="figure"><img src="../assets/images/chapters/ch06-planetary-weave.jpg" alt="Planetary weave" loading="lazy" /><figcaption>Figure 6.1 — Visual RF shell in planetary_weave.comp (not instrumentation).</figcaption></figure>
-<table><thead><tr><th>Context</th><th>RF means</th></tr></thead>
+<p>RF in this stack is three different weapons in the same word. Separate them or you will argue with a shader about ionospheric physics.</p>
+<figure class="figure"><img src="../assets/images/chapters/ch06-planetary-weave.jpg" alt="Planetary weave" loading="lazy" /><figcaption>Figure 6.1 — Visual shell only.</figcaption></figure>
+<table><thead><tr><th>Context</th><th>RF means</th><th>Label</th></tr></thead>
 <tbody>
-<tr><td>planetary_weave.comp</td><td><span class="tag vis">Visual</span> atmospheric shell layer</td></tr>
-<tr><td>NEXUS Field Antenna</td><td><span class="tag impl">Implemented</span> local orchestration</td></tr>
-<tr><td>Engine fieldPhi</td><td>Gate voltage / wave potential</td></tr>
+<tr><td>planetary_weave.comp</td><td>Atmospheric visual layer</td><td><span class="tag vis">Visual</span></td></tr>
+<tr><td>NEXUS Field Antenna</td><td>Local orchestration</td><td><span class="tag impl">Implemented</span></td></tr>
+<tr><td>Engine fieldPhi</td><td>Gate voltage / wave potential</td><td><span class="tag impl">Implemented</span></td></tr>
 </tbody></table>
-<div class="eq">FSPL ∝ 20 log₁₀(d) + 20 log₁₀(f) — teaching reference, not shader math</div>
+<p class="tag meta"><strong>Rock:</strong> planetary weave is art for the eye, not a spectrum analyzer. We do not hide that.</p>
 
     <nav class="chapter-nav bottom"><a class="btn secondary" href="05-packet-field.html">← Ch 5</a> <a class="btn" href="07-gpu-engine.html">Ch 7 →</a></nav>
   </main>
-  <footer><p>Field Primer · CC BY-NC-SA 4.0 · <a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AmouranthRTX</a> engine branding</p></footer>
+  <footer><p>Field Technology v3 · CC BY-NC-SA 4.0 · We do not hide the rocks.</p></footer>
 </body>
 </html>

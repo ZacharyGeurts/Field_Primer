@@ -7,10 +7,10 @@ import html
 SITE = "https://zacharygeurts.github.io/Field_Primer"
 OG_IMAGE = f"{SITE}/assets/images/og-image.jpg"
 TWITTER_SITE = "@ZacharyGeurts"
-DEFAULT_TITLE = "Field Primer — Sovereign Field Technology Manual"
+DEFAULT_TITLE = "Field Technology v3 — Offense, Defense, Operator Truth"
 DEFAULT_DESC = (
-    "The definitive manual for Fields, Thermodynamics, Entropy, and operator reality. "
-    "For physicists, engineers, and everyone."
+    "Reality is 3D. Time is linear. Energy can be moved. "
+    "The illustrated sovereign manual — serious terms, honest rocks, meme corpus honored."
 )
 
 
@@ -38,7 +38,7 @@ def social_meta(
   <link rel="icon" type="image/png" sizes="32x32" href="{path_prefix}favicon.png" />
   <link rel="apple-touch-icon" href="{path_prefix}apple-touch-icon.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Field Primer" />
+  <meta property="og:site_name" content="Field Technology v3" />
   <meta property="og:title" content="{t}" />
   <meta property="og:description" content="{d}" />
   <meta property="og:url" content="{u}" />
@@ -56,8 +56,8 @@ def social_meta(
 
 
 def chapter_meta(num: int, title: str, slug: str, image_file: str, alt: str) -> str:
-    page_title = f"{num} — {title} · Field Primer"
-    desc = f"Chapter {num}: {title}. Illustrated manual on sovereign field technology."
+    page_title = f"{num} — {title} · Field Technology v3"
+    desc = f"Chapter {num}: {title}. Field Technology v3 — serious terms, honest rocks."
     url = f"{SITE}/chapters/{slug}.html"
     image = f"{SITE}/assets/images/{image_file}"
     return social_meta(

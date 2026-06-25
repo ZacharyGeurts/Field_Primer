@@ -1,56 +1,67 @@
-# Field Primer — Home
+# Field Technology v3 — Home
 
-**The manual for the foreseeable future.**
+**Offense. Defense. Operator truth. We do not hide the rocks.**
 
-Field Primer teaches **Fields**, **Thermodynamics**, **Entropy**, and **operator reality** for the stack built by Zachary Robert Geurts:
+> **Subtext:** Reality is 3D. Time is linear. Energy can be moved.
 
-| Repository | Role |
-|------------|------|
-| [AMOURANTHRTX](https://github.com/ZacharyGeurts/AMOURANTHRTX) | Vulkan Field Die · GPU fabric · RTX-DOS |
-| [NEXUS-Shield](https://github.com/ZacharyGeurts/NEXUS-Shield) | Packet field · entropy oracle · local panel |
-| **Field Primer** (this wiki) | Education for physicists, engineers, and everyone |
+---
+
+## What v3 is
+
+The illustrated sovereign manual — rewritten under **serious terms**:
+
+- The greatest weapon is **field literacy** you already carry
+- **Defense** — NEXUS packet field, entropy oracle, local panel
+- **Offense** — AMOURANTHRTX dispatch, fabric, Field Die
+- **Meme corpus** — [ZacharyGeurts/memes](https://github.com/ZacharyGeurts/memes) honored as operator culture
+
+**Web:** [Field Primer GitHub Pages](https://zacharygeurts.github.io/Field_Primer/)
+
+![v3 cover](https://raw.githubusercontent.com/ZacharyGeurts/Field_Primer/main/assets/images/v3/field-technology-v3-cover-front.jpg)
 
 ---
 
 ## Start here
 
-| Audience | First chapter |
-|----------|---------------|
-| Physicist | [03 — Thermodynamics in the Engine](03-Thermodynamics-In-The-Engine) |
-| Engineer | [07 — GPU Field Engine](07-GPU-Field-Engine) → [08 — Field Die & Data Bus](08-Field-Die-And-Data-Bus) |
-| Curious human | [01 — Preface](01-Preface-What-Is-A-Field) → [05 — Packet Field](05-Packet-Field) |
-| Skeptic | [12 — Operator Reality vs Theory](12-Operator-Reality-Vs-Theory) |
+| Audience | Chapter |
+|----------|---------|
+| Everyone | [01 — The Weapon You Already Hold](01-Preface-What-Is-A-Field) |
+| Physicist | [03 — Thermodynamics](03-Thermodynamics-In-The-Engine) |
+| Engineer | [07 — GPU Engine](07-GPU-Field-Engine) → [08 — Field Die](08-Field-Die-And-Data-Bus) |
+| Skeptic | [12 — The Rocks We Do Not Hide](12-Operator-Reality-Vs-Theory) |
 
-**Web edition (picture-led):** [Field Primer GitHub Pages](https://zacharygeurts.github.io/Field_Primer/)
-
-![Cover](https://raw.githubusercontent.com/ZacharyGeurts/Field_Primer/main/assets/images/field-primer-hero.jpg)
-
-- **[Picture Gallery](https://zacharygeurts.github.io/Field_Primer/gallery.html)** — visual atlas
-- **[Chapter 1 (illustrated)](https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html)** — start here on the web
-- **[Image system](IMAGE-SYSTEM)** — how figures map to chapters
+- [Gallery](https://zacharygeurts.github.io/Field_Primer/gallery.html)
+- [v3 manifest](https://github.com/ZacharyGeurts/Field_Primer/blob/main/FIELD-TECHNOLOGY-V3.md)
+- [Image system](IMAGE-SYSTEM)
 
 ---
 
-## The three fabric channels
+## Three axioms in the stack
 
-Every classic canvas dispatch evolves three coupled GPU images:
-
-| Channel | Binding | Meaning |
-|---------|---------|---------|
-| **Phi (Φ)** | 8 | Wave / gate potential |
-| **Thermo** | 9 | Heat + entropy density on the boundary |
-| **Flow** | 10 | Momentum magnitude + gradient components |
-
-The **ThermoAccountant** (binding 2) writes an entropy ledger each frame. The **data_bus[64]** mirrors telemetry for grep and HUD.
+| Axiom | Implementation |
+|-------|----------------|
+| Reality is 3D | Texels, die map, packet positions |
+| Time is linear | `TotalTime::seal()`, per-frame thermo |
+| Energy can be moved | Phi/Thermo/Flow coupling |
 
 ---
 
-## License
+## The rocks
 
-**CC BY-NC-SA 4.0** — [legal code](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
-
-Additional reservation: commercial and derivative rights retained by Zachary Robert Geurts. See [License & Rights](License-And-Rights).
+| Claim | Reality |
+|-------|---------|
+| Packet field sees all | Local sockets + heuristics |
+| GPU Landauer | Proxy integral |
+| RF planetary shell | Visual only |
+| Meme/tarot art | Culture, not API |
 
 ---
 
-*Engine presenter branding: AmouranthRTX — homage card at the bottom of the stack, not API authority.*
+## Repositories
+
+| Repo | Role |
+|------|------|
+| [AMOURANTHRTX](https://github.com/ZacharyGeurts/AMOURANTHRTX) | Vulkan Field Die · fabric |
+| [NEXUS-Shield](https://github.com/ZacharyGeurts/NEXUS-Shield) | Packet field · panel |
+| [memes](https://github.com/ZacharyGeurts/memes) | Visual corpus |
+| **Field Primer** | This wiki + site |

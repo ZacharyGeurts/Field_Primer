@@ -3,35 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>4 — Entropy: Receipts &amp; Oracles · Field Primer</title>
-  <meta name="description" content="Chapter 4: Entropy: Receipts &amp; Oracles. Illustrated manual on sovereign field technology." />
+  <title>4 — Irreversibility &amp; Receipts · Field Technology v3</title>
+  <meta name="description" content="Chapter 4: Irreversibility &amp; Receipts. Field Technology v3 — serious terms, honest rocks." />
   <link rel="canonical" href="https://zacharygeurts.github.io/Field_Primer/chapters/04-entropy.html" />
   <meta name="theme-color" content="#040810" />
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png" />
   <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Field Primer" />
-  <meta property="og:title" content="4 — Entropy: Receipts &amp; Oracles · Field Primer" />
-  <meta property="og:description" content="Chapter 4: Entropy: Receipts &amp; Oracles. Illustrated manual on sovereign field technology." />
+  <meta property="og:site_name" content="Field Technology v3" />
+  <meta property="og:title" content="4 — Irreversibility &amp; Receipts · Field Technology v3" />
+  <meta property="og:description" content="Chapter 4: Irreversibility &amp; Receipts. Field Technology v3 — serious terms, honest rocks." />
   <meta property="og:url" content="https://zacharygeurts.github.io/Field_Primer/chapters/04-entropy.html" />
   <meta property="og:image" content="https://zacharygeurts.github.io/Field_Primer/assets/images/entropy-chapter.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Heat flowing into ordered lattice — entropy metaphor" />
+  <meta property="og:image:alt" content="Entropy receipts — time ran forward" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ZacharyGeurts" />
   <meta name="twitter:creator" content="@ZacharyGeurts" />
-  <meta name="twitter:title" content="4 — Entropy: Receipts &amp; Oracles · Field Primer" />
-  <meta name="twitter:description" content="Chapter 4: Entropy: Receipts &amp; Oracles. Illustrated manual on sovereign field technology." />
+  <meta name="twitter:title" content="4 — Irreversibility &amp; Receipts · Field Technology v3" />
+  <meta name="twitter:description" content="Chapter 4: Irreversibility &amp; Receipts. Field Technology v3 — serious terms, honest rocks." />
   <meta name="twitter:image" content="https://zacharygeurts.github.io/Field_Primer/assets/images/entropy-chapter.jpg" />
-  <meta name="twitter:image:alt" content="Heat flowing into ordered lattice — entropy metaphor" />
+  <meta name="twitter:image:alt" content="Entropy receipts — time ran forward" />
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
 </head>
 <body class="chapter-page accent-thermo">
   <nav class="top"><div class="inner">
-    <a class="logo" href="../index.html">FIELD PRIMER</a>
+    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v3-badge">v3</span></a>
     <ul>
+      <li><a href="../index.html#axioms">Axioms</a></li>
       <li><a href="../gallery.html">Gallery</a></li>
       <li><a href="../index.html#chapters">Chapters</a></li>
       <li><a href="https://github.com/ZacharyGeurts/Field_Primer/wiki/04-Entropy-Receipts-And-Oracles">Wiki</a></li>
@@ -40,27 +41,26 @@
   <header class="chapter-hero" style="background-image:url('../assets/images/entropy-chapter.jpg')">
     <div class="chapter-hero-overlay"></div>
     <div class="chapter-hero-content">
-      <p class="eyebrow">Chapter 4</p>
-      <h1>Entropy: Receipts &amp; Oracles</h1>
+      <p class="eyebrow">Chapter 4 · Field Technology v3</p>
+      <h1>Irreversibility &amp; Receipts</h1>
     </div>
   </header>
   <main class="chapter-main">
     <nav class="chapter-nav"><a class="btn secondary" href="03-thermodynamics.html">← Ch 3</a> <a class="btn" href="05-packet-field.html">Ch 5 →</a></nav>
     
-<p><code>ThermoAccountant</code> at Vulkan binding <strong>2</strong> writes an entropy ledger every <code>dispatch_canvas()</code>. NEXUS runs a separate <strong>Shannon oracle</strong> on files. Same word — different layers.</p>
-<figure class="figure"><img src="../assets/images/entropy-chapter.jpg" alt="Entropy chapter art" loading="lazy" /><figcaption>Figure 4.1 — Irreversibility: fabric floor, frame proxy, file randomness.</figcaption></figure>
-<h3>Landauer (theory)</h3>
+<p>Entropy is the <strong>receipt</strong> that time ran forward. Two engines, one word — we say both out loud.</p>
+<figure class="figure"><img src="../assets/images/entropy-chapter.jpg" alt="Entropy chapter" loading="lazy" /><figcaption>Figure 4.1 — Irreversibility: fabric floor, frame proxy, file randomness.</figcaption></figure>
+<h3>ThermoAccountant (engine)</h3>
+<p class="tag impl"><code>ThermoAccountant</code> at Vulkan binding 2 writes a ledger every <code>dispatch_canvas()</code>.</p>
 <div class="eq">E_min = k_B T ln 2</div>
-<p class="tag meta">In-engine <code>entropyThisFrame</code> is a proxy integral — not joules from nvidia-smi.</p>
-<h3>Shannon (NEXUS)</h3>
+<p class="tag meta"><strong>Rock:</strong> in-engine <code>entropyThisFrame</code> is a proxy integral — not joules from nvidia-smi.</p>
+<h3>Shannon oracle (NEXUS)</h3>
 <div class="eq">H = −Σ p_i log₂ p_i</div>
-<p>High H suggests packed, encrypted, or obfuscated payloads. Daemon thresholds tune calm / alert / storm polling.</p>
-<h3>Operator grep</h3>
-<pre class="eq">./linux.sh run 2>&1 | tee run.log
-grep -E 'THERMO|entropy|Boundary|prevMaint' run.log</pre>
+<p class="tag impl">High H on file payloads raises storm polling — defensive signal, not automatic verdict.</p>
+<pre class="eq">grep -E 'THERMO|entropy|Boundary|prevMaint' run.log</pre>
 
     <nav class="chapter-nav bottom"><a class="btn secondary" href="03-thermodynamics.html">← Ch 3</a> <a class="btn" href="05-packet-field.html">Ch 5 →</a></nav>
   </main>
-  <footer><p>Field Primer · CC BY-NC-SA 4.0 · <a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AmouranthRTX</a> engine branding</p></footer>
+  <footer><p>Field Technology v3 · CC BY-NC-SA 4.0 · We do not hide the rocks.</p></footer>
 </body>
 </html>
