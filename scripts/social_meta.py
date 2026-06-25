@@ -5,13 +5,13 @@ from __future__ import annotations
 import html
 
 SITE = "https://zacharygeurts.github.io/Field_Primer"
-OG_VERSION = "4"
+OG_VERSION = "5"
 OG_IMAGE = f"{SITE}/assets/images/og-image.jpg?v={OG_VERSION}"
 TWITTER_SITE = "@ZacharyGeurts"
-DEFAULT_TITLE = "Field Technology v4 — Textbook of 2026"
+DEFAULT_TITLE = "Field Technology v5 — Serious Book · Textbook of 2026"
 DEFAULT_DESC = (
     "Reality is 3D. Time is linear. Energy can be moved. "
-    "18 chapters, creditor tributes, love and God beside serious science."
+    "22 chapters of hand-written field engineering — Queen, KILROY, sovereign time, packet field, thermodynamics."
 )
 
 
@@ -39,7 +39,7 @@ def social_meta(
   <link rel="icon" type="image/png" sizes="32x32" href="{path_prefix}favicon.png" />
   <link rel="apple-touch-icon" href="{path_prefix}apple-touch-icon.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Field Technology v4" />
+  <meta property="og:site_name" content="Field Technology v5" />
   <meta property="og:title" content="{t}" />
   <meta property="og:description" content="{d}" />
   <meta property="og:url" content="{u}" />
@@ -57,8 +57,8 @@ def social_meta(
 
 
 def chapter_meta(num: int, title: str, slug: str, image_file: str, alt: str) -> str:
-    page_title = f"{num} — {title} · Field Technology v4"
-    desc = f"Chapter {num}: {title}. Field Technology v4 — longer chapters, love, honest rocks."
+    page_title = f"{num} — {title} · Field Technology v5"
+    desc = f"Chapter {num}: {title}. Field Technology v5 — long-form textbook with immersive reader mode."
     url = f"{SITE}/chapters/{slug}.html"
     image = f"{SITE}/assets/images/{image_file}"
     return social_meta(

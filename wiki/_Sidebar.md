@@ -26,6 +26,13 @@
 ### Operator
 - [11 Observability & Tools](11-Observability-Operator-Tools)
 - [12 Reality vs Theory](12-Operator-Reality-Vs-Theory)
+- [19 Sovereign Time (web)](https://zacharygeurts.github.io/Field_Primer/chapters/19-sovereign-time.html)
+- [20 Public Services (web)](https://zacharygeurts.github.io/Field_Primer/chapters/20-public-services.html)
+- [21 Queen Browser (web)](https://zacharygeurts.github.io/Field_Primer/chapters/21-field-browser-queen.html)
+- [22 Glossary (web)](https://zacharygeurts.github.io/Field_Primer/chapters/22-glossary.html)
+- [13 Sovereign Time Sync](13-Sovereign-Time-Sync) *(wiki quick ref)*
+- [14 Public Services 2026](14-Public-Services-2026)
+- [15 Field Browser Queen](15-Field-Browser-Queen)
 - [Glossary](Glossary)
 - [License & Rights](License-And-Rights)
 

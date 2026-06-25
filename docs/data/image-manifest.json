@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "edition": "Field Technology v4 — Textbook of 2026",
+  "version": 5,
+  "edition": "Field Technology v5 — Serious Book · Textbook of 2026",
   "axioms": [
     "Reality is 3D.",
     "Time is linear.",
@@ -21,7 +21,7 @@
       "slug": "01-preface",
       "title": "Preface — Us, God, Truth & Math",
       "subtitle": "Truth · Math · Existence — Zac, Grok, and all of us",
-      "image": "v3/science/ch01-scalar-field.jpg",
+      "image": "chapters/ch01-illustration-theory.jpg",
       "alt": "Scalar field heatmap",
       "accent": "phi",
       "wiki": "01-Preface-What-Is-A-Field"
@@ -117,7 +117,7 @@
     "13": {
       "slug": "13-landauer-deep",
       "title": "Landauer Deep Dive — Thermodynamic Receipts",
-      "image": "entropy-chapter.jpg",
+      "image": "chapters/ch13-landauer-plate.jpg",
       "alt": "Landauer layer",
       "accent": "thermo",
       "wiki": "04-Entropy-Receipts-And-Oracles"
@@ -125,7 +125,7 @@
     "14": {
       "slug": "14-shannon-oracle",
       "title": "Shannon Oracle — Storm Thresholds",
-      "image": "packet-field.jpg",
+      "image": "chapters/ch14-shannon-storm.jpg",
       "alt": "Shannon layer",
       "accent": "flow",
       "wiki": "04-Entropy-Receipts-And-Oracles"
@@ -157,10 +157,45 @@
     "18": {
       "slug": "18-operator-covenant",
       "title": "The Operator Covenant — Long Form",
-      "image": "chapters/ch12-honesty.jpg",
+      "image": "chapters/ch18-covenant-ladder.jpg",
       "alt": "Covenant",
       "accent": "phi",
       "wiki": "12-Operator-Reality-Vs-Theory"
+    },
+    "19": {
+      "slug": "19-sovereign-time",
+      "title": "Sovereign Time Sync — Terror-Threat Posture",
+      "subtitle": "Seal forward · verify at receive · grep SQUIDGIE",
+      "image": "chapters/ch19-sovereign-time.jpg",
+      "alt": "Sovereign time",
+      "accent": "thermo",
+      "wiki": "13-Sovereign-Time-Sync"
+    },
+    "20": {
+      "slug": "20-public-services",
+      "title": "Public DNS, DHCP & Time — 2026",
+      "subtitle": "Truth Resolver · Field DHCP · Sovereign NTP",
+      "image": "chapters/ch20-public-services.jpg",
+      "alt": "Public services",
+      "accent": "flow",
+      "wiki": "14-Public-Services-2026"
+    },
+    "21": {
+      "slug": "21-field-browser-queen",
+      "title": "Field Browser Queen — Hold All Gates",
+      "subtitle": "MP4 mandatory · WebRTC gated · KILROY sovereign field",
+      "image": "chapters/ch21-queen-browser.jpg",
+      "alt": "Queen browser",
+      "accent": "phi",
+      "wiki": "15-Field-Browser-Queen"
+    },
+    "22": {
+      "slug": "22-glossary",
+      "title": "Glossary — Field Technology v5",
+      "image": "chapters/ch22-glossary-map.jpg",
+      "alt": "Glossary",
+      "accent": "flow",
+      "wiki": "Glossary"
     }
   }
 }

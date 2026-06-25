@@ -34,4 +34,15 @@ RTX Zero mode: `?rtx=1` — Aqua chrome, cache-first refresh.
 3. Move mouse on classic canvas — watch `entropyThisFrame`
 4. Open NEXUS panel — archive one gatekeeper decision (trust or watchlist)
 
+## Sovereign time — terror-threat posture
+
+Under assumed adversary knowledge: run **your** timeserver, verify at receive, grep `SQUIDGIE` if micron clocks disagree.
+
+```bash
+python3 sovereign-time.py serve    # operator node
+python3 sovereign-time.py sync     # receiver double-check
+```
+
+See [13 — Sovereign Time Sync](13-Sovereign-Time-Sync).
+
 **Next:** [12 — Reality vs Theory](12-Operator-Reality-Vs-Theory)

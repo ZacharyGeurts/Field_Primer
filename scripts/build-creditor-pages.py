@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Field Technology v4 creditor tribute pages."""
+"""Build Field Technology v5 creditor tribute pages."""
 from __future__ import annotations
 
 import html
@@ -20,14 +20,15 @@ TEMPLATE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{name} — Creditor Tribute · Field Technology v4</title>
+  <title>{name} — Creditor Tribute · Field Technology v5</title>
 {social_meta}
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
+  <link rel="stylesheet" href="../css/reader.css" />
 </head>
 <body class="chapter-page accent-{accent} creditor-page">
   <nav class="top"><div class="inner">
-    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v4-badge">v4</span></a>
+    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v5-badge">v5</span></a>
     <ul>
       <li><a href="../index.html#creditors">Creditors</a></li>
       <li><a href="../index.html#love-god">Love &amp; God</a></li>
@@ -63,7 +64,8 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="muted tag-line"><span class="tag phil">Philosophy</span> Sacred sections are operator language — not lab measurements. Science remains labeled in chapters.</p>
     <nav class="chapter-nav bottom">{prev_link} {next_link}</nav>
   </main>
-  <footer><p>Field Technology v4 · With love · <a href="../index.html">Home</a></p></footer>
+  <footer><p>Field Technology v5 · With love · <a href="../index.html">Home</a></p></footer>
+  <script src="../js/reader.js" defer></script>
 </body>
 </html>
 """
@@ -73,14 +75,19 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Creditor Tributes · Field Technology v4</title>
+  <title>Creditor Tributes · Field Technology v5</title>
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
+  <link rel="stylesheet" href="../css/reader.css" />
 </head>
 <body>
   <nav class="top"><div class="inner">
-    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v4-badge">v4</span></a>
-    <ul><li><a href="../index.html">Home</a></li></ul>
+    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v5-badge">v5</span></a>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#chapters">22 Chapters</a></li>
+      <li><a href="../gallery.html">Gallery</a></li>
+    </ul>
   </div></nav>
   <main style="max-width:1100px;margin:0 auto;padding:3rem 2rem">
     <p class="eyebrow">With gratitude</p>
@@ -88,6 +95,8 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <p class="muted">Each page honors who prompted our discoveries — science, collaborators, and the sacred.</p>
     <div class="creditor-grid">{cards}</div>
   </main>
+  <footer><p>Field Technology v5 · Serious book · With love</p></footer>
+  <script src="../js/reader.js" defer></script>
 </body>
 </html>
 """
