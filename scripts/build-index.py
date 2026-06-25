@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
+from master_rocks_table import master_rocks_index_rows  # noqa: E402
 from social_meta import social_meta  # noqa: E402
 
 INDEX = ROOT / "docs/index.html"
@@ -24,8 +25,8 @@ CHAPTER_BLURBS: dict[str, str] = {
     "01": "Start here · illustration theory",
     "19": "SQUIDGIE · terror-threat posture",
     "20": "DNS · DHCP · NTP",
-    "21": "Robot brain · SDF imaging · KILROY",
-    "22": "Full glossary index",
+    "21": "Queen gates · Hostess 7 doctrine",
+    "22": "Glossary · master rocks table",
 }
 
 
@@ -87,27 +88,58 @@ def patch_reader_cta(text: str) -> str:
 
 
 def patch_about_copy(text: str) -> str:
-    """Ensure index about section matches long-book edition."""
-    old_snippet = (
-        "Illustration follows Leonardo-to-Mayer theory: about <strong>one signaled figure per 1,000 words</strong> "
-        "— mechanism, not wallpaper."
+    """Index about section — honest operator-textbook positioning."""
+    about_block = """          <p>
+            v5 is a <strong>manuscript-grade operator textbook</strong> — full sentences, drills, honesty labels —
+            not publisher-certified and not a marketing deck. Chapter 1 locks thesis, audience, and the operator map;
+            Chapter 12 and the <a href="chapters/22-glossary.html#master-rocks">master rocks table</a> label every claim
+            <span class="tag impl">Implemented</span>, <span class="tag meta">Metaphor</span>, <span class="tag phil">Philosophy</span>, or <span class="tag vis">Visual</span>.
+            The engineering spine (Chapters 2–12, 19–21) stands alone; Love, God, and creditor tributes (16–18) are a
+            <em>bracketed philosophical track</em> — optional, labeled, never smuggled into thermodynamic proofs.
+          </p>
+          <p>
+            You will learn how AMOURANTHRTX treats GPU texels as addressable state, how NEXUS turns sockets into
+            readable perimeter, how Queen holds browser gates when <code>QUEEN_READY</code> without amputating the web,
+            and how KILROY seals Field Die discipline at the kernel boundary. Illustration follows Mayer density (~1 figure / 1,000 words).
+            You will also learn what we <em>cannot</em> measure — proxy entropy is not joules; SDF plates are not fMRI — and we say so in place.
+          </p>
+          <p>
+            Read Chapter 1 for thesis, operator map, and validation table. Read Chapter 12 before you treat a shader as a spectrum analyzer.
+            Read Chapters 19–21 for sovereign time, public services, and Queen. Skip 16–18 if you want engineering only.
+          </p>"""
+    text = re.sub(
+        r'<section id="about".*?</section>',
+        f'<section id="about" class="v3-launch">\n      <div class="v3-launch-inner">\n        <div class="v3-copy">\n          <p class="eyebrow">What v5 is</p>\n          <h2>An operator textbook you can actually read</h2>\n{about_block}\n        </div>\n        <figure class="v3-covers">\n          <img src="assets/images/fabric-triple.jpg" alt="Phi Thermo Flow" loading="lazy" />\n          <img src="assets/images/field-die.jpg" alt="Field Die" loading="lazy" />\n        </figure>\n      </div>\n    </section>',
+        text,
+        count=1,
+        flags=re.DOTALL,
     )
-    new_snippet = (
-        "Illustration follows Leonardo-through-Mayer theory (Chapter 1): about <strong>one signaled figure per 1,000 words</strong> "
-        "— mechanism, not wallpaper. Queen’s in-process robot brain runs Hostess 7: she folds prose to <strong>SDF brain-imaging plates</strong> "
-        "and recalls them through neural Super Intelligence — same density standard, two surfaces (web reader + Hostess storage)."
-    )
-    if old_snippet in text:
-        text = text.replace(old_snippet, new_snippet)
-    queen_line = (
-        "how Queen holds every browser gate without amputating the web, and how KILROY seals"
-    )
-    queen_replacement = (
-        "how Queen’s DARPA robot brain holds every browser gate without amputating the web, how Hostess 7 owns SDF self-storage, and how KILROY seals"
-    )
-    if queen_line in text and queen_replacement not in text:
-        text = text.replace(queen_line, queen_replacement)
     return text
+
+
+def patch_hero_lead(text: str) -> str:
+    lead = """        <strong>Twenty-two chapters of operator prose</strong> — manuscript-grade, honesty-labeled, grep-first.
+        Engineering core on Phi, Thermo, Flow, Field Die, packet field, observability, sovereign time, and Queen.
+        Sacred chapters (16–18) and creditor tributes sit beside the math — bracketed, not mixed into proofs. The rocks stay visible."""
+    text = re.sub(
+        r'<p class="lead">\s*.*?\s*</p>',
+        f'<p class="lead">\n        {lead}\n      </p>',
+        text,
+        count=1,
+        flags=re.DOTALL,
+    )
+    return text
+
+
+def patch_rocks_table(text: str) -> str:
+    rows = master_rocks_index_rows().strip()
+    return re.sub(
+        r'(<section id="rocks">.*?<tbody>)\s*.*?\s*(</tbody>)',
+        rf"\1\n{rows}\n        \2",
+        text,
+        count=1,
+        flags=re.DOTALL,
+    )
 
 
 def main() -> None:
@@ -117,8 +149,8 @@ def main() -> None:
     meta = social_meta(
         title="Field Technology v5 — Serious Book · Textbook of 2026",
         description=(
-            "22 long-form chapters · illustration theory · Queen robot brain · Hostess 7 SDF imaging · "
-            "Field Die · packet field · sovereign time · KILROY. Reality is 3D. Time is linear. Energy can be moved."
+            "22-chapter operator textbook manuscript · honesty labels · operator map · master rocks table · "
+            "Field Die · packet field · sovereign time · Queen. Reality is 3D. Time is linear. Energy can be moved."
         ),
         url="https://zacharygeurts.github.io/Field_Primer/",
         image_alt="Field Technology v5 — Serious Book cover and axioms",
@@ -147,6 +179,8 @@ def main() -> None:
     )
 
     text = patch_about_copy(text)
+    text = patch_hero_lead(text)
+    text = patch_rocks_table(text)
     text = patch_reader_assets(text)
     text = patch_reader_cta(text)
     INDEX.write_text(text, encoding="utf-8")

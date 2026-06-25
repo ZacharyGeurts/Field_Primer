@@ -7,12 +7,12 @@ import html
 # (lead paragraph, journey bullets)
 ON_THE_WAY: dict[str, tuple[str, list[str]]] = {
     "01": (
-        "You are opening the covenant of Field Technology — not a README, a textbook. On the way through this preface you will learn what a <em>field</em> is in implemented terms, meet the stack (AMOURANTHRTX, NEXUS, Queen, KILROY), adopt the honesty labels that keep poetry from masquerading as measurement, and hold God as Truth, Math, and Existence beside <code>grep</code> without bypassing stderr.",
+        "You are opening Field Technology v5 — an operator textbook manuscript, not a marketing deck. On the way through this preface you will lock the core thesis and audience, read the operator map (field families, project names, honesty labels), learn what you can reproduce today versus what remains aspirational, and see how the sacred track (Chapters 16–18) is bracketed beside the engineering spine.",
         [
-            "Definitions: field, three families, three axioms",
-            "Us, creditors, and the operator who is not the daemon",
-            "Four products — one literacy, distinct boundaries",
-            "Week-zero drill: THERMO, panel, jsonl classification",
+            "Core thesis, audience, and sacred-track bracket",
+            "Operator map: bindings, products, jargon on first use",
+            "Validation table: grep hooks vs open gaps",
+            "Three-part reading spine — engineering before philosophy",
         ],
     ),
     "02": (
