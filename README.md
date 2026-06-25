@@ -1,9 +1,9 @@
-# Field Technology v3 — Textbook of 2026
+# Field Technology v4 — Textbook of 2026
 
 **Serious mathematics and science for sovereign field technology.**
 
 [![Pages](https://img.shields.io/badge/docs-GitHub%20Pages-38bdf8)](https://zacharygeurts.github.io/Field_Primer/)
-[![Edition](https://img.shields.io/badge/edition-Textbook%202026-a78bfa)](FIELD-TECHNOLOGY-V3.md)
+[![Edition](https://img.shields.io/badge/edition-v4-a78bfa)](FIELD-TECHNOLOGY-V4.md)
 [![Credits](https://img.shields.io/badge/research-credits-f0d060)](RESEARCH-CREDITS.md)
 [![Wiki](https://img.shields.io/badge/manual-Wiki-f0d060)](https://github.com/ZacharyGeurts/Field_Primer/wiki)
 
