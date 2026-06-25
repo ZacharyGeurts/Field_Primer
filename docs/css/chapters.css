@@ -38,6 +38,7 @@
 .chapter-main {
   max-width: 780px;
   margin: 0 auto;
+  padding: 2rem 2rem 4rem;
 }
 
 .chapter-main.preface-full {
@@ -53,7 +54,6 @@
 
 .chapter-main.preface-full h2:first-of-type {
   margin-top: 0;
-  padding: 2rem 2rem 4rem;
 }
 
 .chapter-nav {
