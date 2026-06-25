@@ -384,3 +384,86 @@ pre.eq {
     font-size: 1.35rem;
   }
 }
+
+/* Editorial pass — scannable TOC and evidence anchors */
+.chapter-toc {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  background: rgba(56, 189, 248, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.chapter-toc h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  border: none;
+  padding: 0;
+}
+
+.chapter-toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  columns: 2;
+  column-gap: 1.5rem;
+}
+
+.chapter-toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.chapter-toc a:hover {
+  text-decoration: underline;
+}
+
+.evidence-anchor {
+  margin: 2.5rem 0 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(240, 208, 96, 0.05);
+  border: 1px solid rgba(240, 208, 96, 0.2);
+  border-radius: 8px;
+}
+
+.evidence-anchor h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.evidence-anchor table {
+  font-size: 0.88rem;
+}
+
+.evidence-anchor .source-anchors {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.evidence-anchor .source-anchors code {
+  font-size: 0.82rem;
+}
+
+.sacred-workshop {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid var(--flow);
+  background: rgba(167, 139, 250, 0.06);
+}
+
+.figure .claim-tie {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .chapter-toc ol {
+    columns: 1;
+  }
+}

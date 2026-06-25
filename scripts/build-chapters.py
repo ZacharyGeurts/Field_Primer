@@ -11,10 +11,13 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 CONTENT = Path(__file__).resolve().parents[1] / "content" / "chapters"
 from chapter_bookends import inject_bookends  # noqa: E402
+from chapter_signposting import inject_signposting  # noqa: E402
 from editorial_front_matter import inject_editorial_front_matter, replace_reading_spine  # noqa: E402
 from illustration_theory_section import inject_illustration_theory  # noqa: E402
 from inject_figures import inject_figures  # noqa: E402
 from master_rocks_table import inject_master_rocks  # noqa: E402
+from technical_anchors import inject_technical_anchors  # noqa: E402
+from tighten_sacred import tighten_sacred  # noqa: E402
 from social_meta import chapter_meta  # noqa: E402
 
 MANIFEST = ROOT / "docs/data/image-manifest.json"
@@ -99,10 +102,13 @@ def main() -> None:
         body = load_body(key, ch["slug"])
         body = inject_editorial_front_matter(body, key)
         body = replace_reading_spine(body, key)
+        body = tighten_sacred(body, key)
         body = inject_illustration_theory(body, key)
         body = inject_bookends(body, key, ch["image"], ch.get("alt", ch["title"]))
-        body = inject_master_rocks(body, key)
+        body = inject_signposting(body, key)
         body = inject_figures(body, key)
+        body = inject_master_rocks(body, key)
+        body = inject_technical_anchors(body, key)
         prev_link = nav_link(num, keys, manifest, "prev")
         next_link = nav_link(num, keys, manifest, "next")
         meta = chapter_meta(

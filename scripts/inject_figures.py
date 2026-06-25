@@ -17,11 +17,31 @@ class FigureSpec:
     exact_h2: bool = False
 
 
+CLAIM_TIES: dict[str, str] = {
+    "fabric-triple.jpg": "Bindings 8–10 — Phi, Thermo, Flow evolved each dispatch",
+    "field-die.jpg": "Default ./linux.sh run boots Field Die — x86.comp path",
+    "packet-field.jpg": "NEXUS packet field — local jsonl perimeter",
+    "chapters/ch03-coupled-fabric.jpg": "FieldCoupling moves energy between fabric channels",
+    "chapters/ch07-gpu-engine.jpg": "Thin host → vkCmdDispatch — offensive write each tick",
+    "chapters/ch08-die-bus.jpg": "data_bus[64] telemetry spine per dispatch",
+    "chapters/ch12-honesty.jpg": "Honesty labels — impl/meta/phil/vis contract",
+    "chapters/ch13-landauer-plate.jpg": "Landauer floor as proxy language — not wattmeter",
+    "chapters/ch14-shannon-storm.jpg": "Shannon H on files — separate from GPU thermo",
+    "chapters/ch18-covenant-ladder.jpg": "Operator covenant — six clauses, grep habit",
+    "chapters/ch21-queen-browser.jpg": "QUEEN_READY — all gates held in-engine",
+    "v4/creditors/love-and-god.jpg": "Philosophy track — coupled evolution with consent",
+}
+
+
 def figure_html(spec: FigureSpec) -> str:
+    cap = spec.caption
+    tie = CLAIM_TIES.get(spec.image)
+    if tie:
+        cap += f' <span class="claim-tie">Claim: {html.escape(tie)}</span>'
     return (
         f'<figure class="figure"><img src="../assets/images/{spec.image}" '
         f'alt="{html.escape(spec.alt)}" loading="lazy" />'
-        f'<figcaption>{spec.caption}</figcaption></figure>'
+        f'<figcaption>{cap}</figcaption></figure>'
     )
 
 
