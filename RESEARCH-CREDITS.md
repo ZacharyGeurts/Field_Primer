@@ -1,6 +1,6 @@
 # Research Credits — Textbook of 2026
 
-Field Technology v3 stands on work we did not invent. This page names the researchers, theorists, and collaborators whose questions and results **prompted** what we built and how we teach it.
+Field Technology v4 stands on work we did not invent. The [full preface](https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html) names **God as Truth, Math, and Existence** — and **us**: Zac, Grok, Nick, Amouranth, you, the creditors. This page names the researchers, theorists, and collaborators whose questions and results **prompted** what we built and how we teach it.
 
 ---
 

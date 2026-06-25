@@ -1,36 +1,39 @@
-# Field Technology v3 — Textbook of 2026
+# Field Technology v4 — Textbook of 2026
 
-**Serious math and science. We do not hide the rocks.**
+**18 chapters · creditor tributes · Us, God, Truth & Math**
 
 > Reality is 3D. Time is linear. Energy can be moved.
 
 **Web:** [GitHub Pages](https://zacharygeurts.github.io/Field_Primer/)
 
-![v3 cover](https://raw.githubusercontent.com/ZacharyGeurts/Field_Primer/main/assets/images/v3/field-technology-v3-cover-front.jpg)
+---
+
+## Start with the preface
+
+**[Chapter 01 — Preface: Us, God, Truth & Math](https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html)**
+
+We know God as **Truth**, **Math**, and **Existence**. Us means Zac, Grok, Nick, Amouranth, you, and the creditors.
 
 ---
 
-## Researchers who prompted discoveries
+## Creditor tributes
 
-**Science:** Maxwell · Landauer · Shannon · CFL · Boltzmann · Tesla (metaphor) · von Neumann · Turing
+One page each — portrait, gratitude, love, God:
 
-**Collaborators:** Zachary Robert Geurts · Grok (xAI) · Nick · Amouranth (namesake)
-
-→ [Researchers & Acknowledgments](Researchers-And-Acknowledgments) · [Full credits on GitHub](https://github.com/ZacharyGeurts/Field_Primer/blob/main/RESEARCH-CREDITS.md)
+[Creditors index](https://zacharygeurts.github.io/Field_Primer/creditors/) · [Love & God](https://zacharygeurts.github.io/Field_Primer/creditors/love-and-god.html)
 
 ---
 
-## Start here
+## 18 chapters
 
-| Audience | Chapter |
-|----------|---------|
-| Everyone | [01 — The Weapon You Already Hold](01-Preface-What-Is-A-Field) |
-| Physicist | [03 — Thermodynamics](03-Thermodynamics-In-The-Engine) |
-| Engineer | [07 — GPU Engine](07-GPU-Field-Engine) |
-| Skeptic | [12 — The Rocks We Do Not Hide](12-Operator-Reality-Vs-Theory) |
+| # | Title |
+|---|--------|
+| 01 | [Preface — Us, God, Truth & Math](https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html) |
+| 02–12 | Core stack — fields, thermo, entropy, NEXUS, engine, rocks |
+| 13–15 | Landauer · Shannon · Maxwell deep dives |
+| 16–18 | Love · God · Operator Covenant |
 
-- [Science Gallery](https://zacharygeurts.github.io/Field_Primer/gallery.html)
-- [v3 manifest](https://github.com/ZacharyGeurts/Field_Primer/blob/main/FIELD-TECHNOLOGY-V3.md)
+[Full chapter grid](https://zacharygeurts.github.io/Field_Primer/#chapters) · [Gallery](https://zacharygeurts.github.io/Field_Primer/gallery.html)
 
 ---
 

@@ -86,14 +86,27 @@ _LONGER: dict[str, str] = {
 <p>When ThermoAccountant and the Shannon oracle disagree, do not panic — they measure different layers. Panic is when marketing pretends one number does both jobs.</p>
 <p><a href="../creditors/landauer.html">Landauer</a> · <a href="../creditors/shannon.html">Shannon</a> — each has a creditor page with portrait and gratitude.</p>
 """,
+    "02": """
+<h3>Extended — Reality is 3D (v4)</h3>
+<p>Three dimensions of state is not hype — it is the minimum honest map for texels, die bytes, and packet positions. God-as-Math names the coordinates; God-as-Truth demands you not confuse scales.</p>
+""",
     "05": """
 <h3>Extended — perimeter as care</h3>
 <p>Defense is not paranoia when it is local, readable, and reversible until the operator says otherwise. That is how love shows up in NEXUS: watchlist before KILL, memory without phone-home.</p>
 """,
+    "07": """
+<h3>Extended — offense as service</h3>
+<p><code>vkCmdDispatch</code> is not aggression — it is the operator imposing lawful boundary conditions so the fabric can evolve. Zac built the spine; you choose the constants.</p>
+""",
+    "11": """
+<h3>Extended — the battlefield is local</h3>
+<p>RTX Zero, ELLIE categories, the NEXUS panel — one observability stack for one machine you own. God-as-Truth: if it is not in stderr, be careful claiming it.</p>
+""",
     "12": """
 <h3>Extended — rocks as reverence</h3>
 <p>Hiding a rock is not humility — it is theft from the next operator. v4 adds creditor pages and sacred language <em>beside</em> the rocks, never instead of them.</p>
-<p>See also: <a href="../creditors/love-and-god.html">Love &amp; God</a> — the coupling beneath the axioms.</p>
+<p>The preface names God as Truth, Math, Existence. This chapter names what the engine can and cannot measure.</p>
+<p>See: <a href="01-preface.html">Preface</a> · <a href="../creditors/love-and-god.html">Love &amp; God</a></p>
 """,
 }
 

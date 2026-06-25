@@ -3,6 +3,10 @@
 - [Image System](IMAGE-SYSTEM)
 - [Researchers & Acknowledgments](Researchers-And-Acknowledgments)
 
+### Start
+- [Preface — Us, God, Truth & Math (web)](https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html)
+- [Creditor tributes (web)](https://zacharygeurts.github.io/Field_Primer/creditors/)
+
 ### Foundations
 - [01 Preface — What Is a Field?](01-Preface-What-Is-A-Field)
 - [02 Fields: Pixels to Packets](02-Fields-From-Pixels-To-Packets)

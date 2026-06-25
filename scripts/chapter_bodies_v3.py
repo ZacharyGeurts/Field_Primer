@@ -22,7 +22,7 @@ CHAPTER_BODY: dict[str, str] = {
 <figure class="figure"><img src="../assets/images/v3/science/ch01-scalar-field.jpg" alt="Scalar field heatmap with axes" loading="lazy" /><figcaption>Figure 1.1 — Scalar field Φ(x,y): continuous state over addressable space. Textbook of 2026.</figcaption></figure>
 """,
     "02": """
-<p>Chapter 2 maps the <strong>three dimensions of state</strong> — the v3 reading of “Reality is 3D.” Not cosmology. Texels, die bytes, and packet sentences occupying space you can address.</p>
+<p>Chapter 2 maps the <strong>three dimensions of state</strong> — the v4 reading of “Reality is 3D.” Not cosmology. Texels, die bytes, and packet sentences occupying space you can address.</p>
 <h3>Scale 1 — GPU fabric (spatial)</h3>
 <pre class="eq">RayCanvas → createAnalogFieldFabric() → CANVAS.comp / x86.comp → hardwareFabric mirror</pre>
 <p class="tag impl">Each texel is a cell in a 2D sheet that stacks with channel depth (Phi, Thermo, Flow). The host never runs a CPU PDE solver — evolution is compute-shader work each dispatch.</p>
