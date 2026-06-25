@@ -5,7 +5,8 @@ from __future__ import annotations
 import html
 
 SITE = "https://zacharygeurts.github.io/Field_Primer"
-OG_IMAGE = f"{SITE}/assets/images/og-image.jpg"
+OG_VERSION = "4"
+OG_IMAGE = f"{SITE}/assets/images/og-image.jpg?v={OG_VERSION}"
 TWITTER_SITE = "@ZacharyGeurts"
 DEFAULT_TITLE = "Field Technology v4 — Textbook of 2026"
 DEFAULT_DESC = (

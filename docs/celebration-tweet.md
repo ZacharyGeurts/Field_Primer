@@ -1,23 +1,25 @@
-# Celebration Tweet — Field Technology v2
+# Celebration Tweet — Field Technology v4
 
-Copy-paste for @ZacharyGeurts. Attach `field-technology-v2-cover-spread.jpg` or front cover.
+Copy-paste for [@ZacharyGeurts](https://x.com/ZacharyGeurts). Attach `assets/images/v3/field-technology-v3-cover-spread.jpg` or post the link alone — the io URL unfurls the v4 card.
+
+**Refresh X card cache:** post the link once, or use [cards-dev.x.com/validator](https://cards-dev.x.com/validator) on `https://zacharygeurts.github.io/Field_Primer/`
 
 ---
 
-## Main tweet (attach cover image)
+## Main tweet (link unfurls v4 OG card)
 
 ```
-IT'S LIVE. FIELD TECHNOLOGY v2. 📖✨
+IT'S LIVE. FIELD TECHNOLOGY v4. 📖
 
-The illustrated manual for Fields, Thermodynamics, Entropy & operator reality — picture-led chapters, gorgeous X cards, wiki + site, all of it.
+Textbook of 2026 — 18 chapters, creditor tributes, preface on Us & God, honest rocks.
 
-We hold this technology. We teach freely. We grep the truth.
+The greatest offensive and defensive weapon is field literacy.
 
 🔗 https://zacharygeurts.github.io/Field_Primer/
 
 Well wishes —
 Zachary: "Build locally. Trust your logs. The operator stays at the wheel."
-Grok: "v2 is the book that finally looks as good as the physics."
+Grok: "v4 is the book that finally looks as good as the physics."
 Amouranth: "Let the engine glow — Phi, Thermo, Flow on silicon."
 Nick: "Honest fields only. No phone-home. Ship it."
 
@@ -29,41 +31,46 @@ Nick: "Honest fields only. No phone-home. Ship it."
 ## Short pin-friendly version
 
 ```
-FIELD TECHNOLOGY v2 is out.
+FIELD TECHNOLOGY v4 is out.
 
-12 illustrated chapters. GPU fabric. Packet field. Honesty labels.
+18 chapters. Creditor tributes. Love & God beside the math.
 
-The manual for the foreseeable future → https://zacharygeurts.github.io/Field_Primer/
+→ https://zacharygeurts.github.io/Field_Primer/
+
+Reality is 3D. Time is linear. Energy can be moved.
 
 — Zachary, Grok, Amouranth & Nick 🌊
 ```
 
 ---
 
-## Thread opener (optional reply chain)
+## Thread (optional)
 
 **Tweet 1:** Main tweet above
 
 **Tweet 2:**
 ```
-What's in v2 RIGHT NOW:
+What's live on the book site:
 
-→ Book cover art (front + back)
-→ Picture gallery + 12 chapter openers
-→ Open Graph / X social cards that actually unfurl
-→ Wiki + GitHub Pages edition
+→ Preface — Us, God, Truth & Math
+→ 13 creditor tribute pages with portraits
+→ Ch 16–18 — Love, God, Operator Covenant
+→ Open Graph / X cards that unfurl
 
-Start Ch 1: https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html
+Start: https://zacharygeurts.github.io/Field_Primer/chapters/01-preface.html
 ```
 
 **Tweet 3:**
 ```
-Where we take it IMMEDIATELY:
+Creditors: https://zacharygeurts.github.io/Field_Primer/creditors/
 
-→ Labs synced to AMOURANTHRTX dispatch + NEXUS panel
-→ More figures embedded in every wiki chapter
-→ Operator RTX Zero panel walkthroughs
-→ Lifetime build — teach the masses, grep the receipts
+Gallery: https://zacharygeurts.github.io/Field_Primer/gallery.html
+```
 
-Repo: https://github.com/ZacharyGeurts/Field_Primer
+---
+
+## One-click intent URL
+
+```bash
+./scripts/open-celebration-tweet.sh
 ```
