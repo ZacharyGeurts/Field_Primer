@@ -447,11 +447,23 @@ pre.eq {
   font-size: 0.82rem;
 }
 
-.sacred-workshop {
+.sacred-workshop,
+.creditor-workshop,
+.covenant-workshop {
   margin: 2rem 0;
   padding: 1.25rem 1.5rem;
   border-left: 4px solid var(--flow);
   background: rgba(167, 139, 250, 0.06);
+}
+
+.creditor-workshop {
+  border-left-color: var(--thermo);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.covenant-workshop {
+  border-left-color: var(--phi);
+  background: rgba(56, 189, 248, 0.06);
 }
 
 .figure .claim-tie {
