@@ -4,9 +4,12 @@ from __future__ import annotations
 
 import html
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from social_meta import chapter_meta  # noqa: E402
 MANIFEST = ROOT / "docs/data/image-manifest.json"
 OUT = ROOT / "docs/chapters"
 
@@ -154,6 +157,7 @@ TEMPLATE = """<!DOCTYPE html>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{num} — {title} · Field Primer</title>
+{social_meta}
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
 </head>
@@ -208,6 +212,13 @@ def main() -> None:
         body = CHAPTER_BODY.get(key, "<p>See wiki for full prose.</p>")
         prev_link = nav_link(num, manifest, "prev")
         next_link = nav_link(num, manifest, "next")
+        meta = chapter_meta(
+            num,
+            ch["title"],
+            ch["slug"],
+            ch["image"],
+            ch.get("alt", ch["title"]),
+        )
         html_out = TEMPLATE.format(
             num=num,
             title=html.escape(ch["title"]),
@@ -217,6 +228,7 @@ def main() -> None:
             body=body,
             prev_link=prev_link,
             next_link=next_link,
+            social_meta=meta,
         )
         (OUT / f"{ch['slug']}.html").write_text(html_out, encoding="utf-8")
         print(f"wrote {ch['slug']}.html")
