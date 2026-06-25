@@ -1,25 +1,66 @@
-# 🌌 FIELD PRIMER
+# Field Primer
 
-**Sovereign Field Technology** — The next layer of reality control.
+**The manual for the foreseeable future** — Fields, Thermodynamics, Entropy, and operator reality.
 
-## Three Levels of Understanding
+[![Pages](https://img.shields.io/badge/docs-GitHub%20Pages-38bdf8)](https://zacharygeurts.github.io/Field_Primer/)
+[![Wiki](https://img.shields.io/badge/manual-Wiki-f0d060)](https://github.com/ZacharyGeurts/Field_Primer/wiki)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-**🔬 Physicists & Scientists**  
-Field = extended wave objects (lead-in prefetch, core compute, lead-out modulation) with phase velocity decoupling, boundary resonance, entropy folding. Replaces point particles with resonant spatial fields for zero-cost parallelism and predictive power.
+---
 
-**⚙️ Engineers**  
-FieldX86Core + CANVAS.comp + AmmoOS + Field DNS resolver (loopback truth) + Field DHCP takeover (forces local DNS) + entropy behavioral scoring that detects AI/automated patterns. Low-cost (<5% CPU), stealth, local panel.
+## What this is
 
-**🧑‍🚀 Everyone**  
-Your computer and network now have an invisible physics-powered force field. It owns the address book (DNS), IP assignments (DHCP), watches for robot/AI bullshit, and quietly defends you. No cloud. No trust. Pure local power.
+Field Primer teaches the **sovereign field stack** built by Zachary Robert Geurts:
 
-## Core Visuals & Diagrams
-(Generated hero images and wave diagrams in assets/ — cosmic glowing fields + shield overlays)
+| Layer | Repository | You learn |
+|-------|------------|-----------|
+| GPU fabric & Field Die | [AMOURANTHRTX](https://github.com/ZacharyGeurts/AMOURANTHRTX) | Phi, Thermo, Flow · ThermoAccountant · `data_bus[64]` |
+| Network & panel | [NEXUS-Shield](https://github.com/ZacharyGeurts/NEXUS-Shield) | Packet field · entropy oracle · local HTTPS panel |
+| **This book** | Field Primer | Theory + honesty labels + operator labs |
 
-**We hold this tech.**
+Written for **physicists**, **engineers**, and **everyone** — same facts, three doors in.
 
-AmouranthRTX 💖 (small elegant branding)
+---
 
-License: CC BY-NC-SA 4.0 + All commercial & derivative rights reserved by Zachary Robert Geurts. Boss approved.
+## Read it
 
-Full details, code examples, NEXUS integration, getting started in the Wiki and /docs/.
+- **Web (gorgeous):** https://zacharygeurts.github.io/Field_Primer/
+- **Wiki (lifetime build):** https://github.com/ZacharyGeurts/Field_Primer/wiki
+- **Chapters in repo:** [`wiki/`](wiki/) — sync source for the GitHub Wiki
+
+---
+
+## Chapter map
+
+1. Preface — What Is a Field?
+2. Fields: Pixels to Packets
+3. Thermodynamics in the Engine
+4. Entropy: Receipts & Oracles
+5. The Packet Field
+6. RF, Signals, Planetary Weave
+7. GPU Field Engine
+8. Field Die & Data Bus
+9. FCC, Tesla Valve, Stability
+10. Hardware Spiderweb
+11. Observability & Operator Tools
+12. Operator Reality vs Theory
+
+Plus [Glossary](wiki/Glossary.md) and [License & Rights](wiki/License-And-Rights.md).
+
+---
+
+## We hold this technology
+
+This is not vaporware poetry. Every chapter labels claims as **Implemented**, **Metaphor**, **Philosophy**, or **Visual**. What you can `grep`, `set`, and screenshot is real.
+
+---
+
+## License
+
+**CC BY-NC-SA 4.0** — [legal code](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+
+Commercial and derivative rights on the underlying engine stack remain with Zachary Robert Geurts. See [LICENSE](LICENSE) and [wiki/License-And-Rights.md](wiki/License-And-Rights.md).
+
+---
+
+<p align="center"><sub>Engine presenter branding: <a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AmouranthRTX</a> — small homage, not API authority.</sub></p>

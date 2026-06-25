@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Field Primer — Sovereign Field Technology Manual</title>
+  <meta name="description" content="The definitive manual for Fields, Thermodynamics, Entropy, and operator reality. For physicists, engineers, and everyone." />
+  <link rel="stylesheet" href="css/field-primer.css" />
+</head>
+<body>
+  <nav class="top">
+    <div class="inner">
+      <span class="logo">FIELD PRIMER</span>
+      <ul>
+        <li><a href="#understand">Understand</a></li>
+        <li><a href="#chapters">Chapters</a></li>
+        <li><a href="#fabric">Fabric</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="https://github.com/ZacharyGeurts/Field_Primer/wiki">Wiki</a></li>
+        <li><a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">Engine</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg" role="img" aria-label="Cosmic field visualization"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Sovereign Field Technology · Zachary Robert Geurts</p>
+      <h1>The Field Primer</h1>
+      <p class="lead">
+        A living textbook on <strong>Fields</strong>, <strong>Thermodynamics</strong>, <strong>Entropy</strong>,
+        and what we actually built — not what marketing wishes were true. Read it as a physicist, wire it as an engineer,
+        trust it as a human at the keyboard.
+      </p>
+      <div class="badges">
+        <span class="badge phi">Φ Phi — wave potential</span>
+        <span class="badge thermo">Thermo — entropy density</span>
+        <span class="badge flow">Flow — momentum field</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="https://github.com/ZacharyGeurts/Field_Primer/wiki">Open the Wiki Manual</a>
+        <a class="btn secondary" href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AMOURANTHRTX Engine</a>
+        <a class="btn secondary" href="https://github.com/ZacharyGeurts/NEXUS-Shield">NEXUS-Shield</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="understand">
+      <h2>Three ways in — same truth</h2>
+      <div class="lanes">
+        <article class="lane">
+          <div class="icon">🔬</div>
+          <h3>Physicists &amp; Scientists</h3>
+          <p class="muted">
+            A <em>field</em> here is a continuous quantity over space: GPU storage images (Φ, Thermo, Flow),
+            die-resident guest RAM, and network telemetry. Coupled PDE steps with CFL guards. Entropy production
+            tracked via Landauer <em>proxies</em> — interpretive accounting, not calorimetry.
+          </p>
+          <div class="eq">E<sub>min</sub> = k<sub>B</sub>T ln 2 &nbsp;·&nbsp; H = −Σ p<sub>i</sub> log₂ p<sub>i</sub></div>
+        </article>
+        <article class="lane">
+          <div class="icon">⚙️</div>
+          <h3>Engineers</h3>
+          <p class="muted">
+            <code>FieldX86Die</code> SSBO + <code>x86.comp</code> + <code>data_bus[64]</code> +
+            <code>ThermoAccountant</code> at Vulkan binding 2. NEXUS packet field, entropy oracle, gatekeeper.
+            Local panel. Loopback DNS truth. &lt;5% CPU when idle.
+          </p>
+        </article>
+        <article class="lane">
+          <div class="icon">🧑‍🚀</div>
+          <h3>Everyone</h3>
+          <p class="muted">
+            Your machine gets a force field you can see in logs and a panel you own. It remembers connections,
+            scores weird behavior, and never phones home for permission. The operator — you — stays at the wheel.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fabric">
+      <h2>The analog field fabric</h2>
+      <p>
+        AMOURANTHRTX keeps three coupled <strong>R32G32B32A32</strong> GPU images at descriptor bindings 8–10.
+        The host never runs a CPU PDE solver; compute shaders evolve the fabric every dispatch.
+      </p>
+      <figure class="figure">
+        <img src="assets/images/field-die.jpg" alt="Field die and fabric layers schematic" loading="lazy" />
+        <figcaption>Field Die cross-section — guest RAM, holographic boundary, and fabric channels (conceptual).</figcaption>
+      </figure>
+      <table>
+        <thead>
+          <tr><th>Channel</th><th>Binding</th><th>Stores</th><th>Silicon metaphor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Phi (Φ)</strong></td><td>8</td><td>Wave / gate potential</td><td>Voltage, clock distribution</td></tr>
+          <tr><td><strong>Thermo</strong></td><td>9</td><td>Heat + entropy density</td><td>Junction temperature, leakage</td></tr>
+          <tr><td><strong>Flow</strong></td><td>10</td><td>Velocity + gradients (.gb)</td><td>Current density, signal velocity</td></tr>
+        </tbody>
+      </table>
+      <div class="callout science">
+        <strong>Operator note:</strong> Fabric numbers appear in <code>THERMO</code> logs and <code>data_bus[24–28]</code>.
+        If entropy reads zero while the fabric moves, dispatch failed — not physics.
+      </div>
+    </section>
+
+    <section>
+      <h2>Entropy — two engines, one word</h2>
+      <figure class="figure">
+        <img src="assets/images/entropy-chapter.jpg" alt="Entropy and thermodynamics visualization" loading="lazy" />
+        <figcaption>Thermodynamic accounting vs Shannon file entropy — same vocabulary, different layers.</figcaption>
+      </figure>
+      <table>
+        <thead>
+          <tr><th>Layer</th><th>What it measures</th><th>Where</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ThermoAccountant</td><td>Frame entropy production proxy</td><td>AMOURANTHRTX binding 2</td></tr>
+          <tr><td>Entropy floor</td><td>Minimum irreversible noise in fabric</td><td><code>clearFieldImages()</code> seed ~0.015</td></tr>
+          <tr><td>Entropy Oracle</td><td>Shannon H on file payloads</td><td>NEXUS-Shield daemon</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>The packet field</h2>
+      <figure class="figure">
+        <img src="assets/images/packet-field.jpg" alt="Packet field network visualization" loading="lazy" />
+        <figcaption>Local connections as a readable field — TX/RX, ports, process paths, corroboration.</figcaption>
+      </figure>
+      <p>
+        NEXUS-Shield turns sockets into sentences: who connected, which port, egress vs ingress, and whether
+        multiple signals agree before a permanent block. The panel is the window; <code>field jsonl</code> is the library.
+      </p>
+    </section>
+
+    <section id="stack">
+      <h2>What we hold</h2>
+      <table>
+        <thead>
+          <tr><th>Product</th><th>Role</th><th>License</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AMOURANTHRTX</a></td><td>Vulkan Field Die · GPU fabric · RTX-DOS</td><td>GPL v3 or commercial</td></tr>
+          <tr><td><a href="https://github.com/ZacharyGeurts/NEXUS-Shield">NEXUS-Shield</a></td><td>Packet field · entropy oracle · local panel</td><td>MIT</td></tr>
+          <tr><td><strong>Field Primer</strong></td><td>This manual — teach the masses</td><td>CC BY-NC-SA 4.0 + reserved rights</td></tr>
+        </tbody>
+      </table>
+      <div class="callout everyone">
+        <strong>Honesty clause:</strong> Metaphors are labeled in Chapter 12. What you can <code>grep</code>, <code>set</code>,
+        and screenshot is real. What sounds like cosmology is often a knob with a poetic name.
+      </div>
+    </section>
+
+    <section id="chapters">
+      <h2>Chapter map — the lifetime build</h2>
+      <p class="muted">Full prose, equations, slot maps, and operator labs live in the <a href="https://github.com/ZacharyGeurts/Field_Primer/wiki">GitHub Wiki</a>. This is the manual for the foreseeable future — expanded every release.</p>
+      <div class="chapter-grid">
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/01-Preface-What-Is-A-Field"><span class="num">01</span><h4>Preface — What Is a Field?</h4><p>Continuous state vs discrete programs. Three field families.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/02-Fields-From-Pixels-To-Packets"><span class="num">02</span><h4>Fields: Pixels to Packets</h4><p>Scalar, vector, and telemetry fields across the stack.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/03-Thermodynamics-In-The-Engine"><span class="num">03</span><h4>Thermodynamics in the Engine</h4><p>Φ/Thermo/Flow evolution, CFL guards, analog knobs.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/04-Entropy-Receipts-And-Oracles"><span class="num">04</span><h4>Entropy: Receipts &amp; Oracles</h4><p>ThermoAccountant, Landauer proxy, Shannon oracle.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/05-Packet-Field"><span class="num">05</span><h4>The Packet Field</h4><p>Gatekeeper, TX/RX, field memory, port stories.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/06-RF-Signals-Planetary-Weave"><span class="num">06</span><h4>RF, Signals, Planetary Weave</h4><p>Antenna orchestrator vs visual RF shell.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/07-GPU-Field-Engine"><span class="num">07</span><h4>GPU Field Engine</h4><p>Thin host, fat GPU, canvas kinds, sealed time.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/08-Field-Die-And-Data-Bus"><span class="num">08</span><h4>Field Die &amp; Data Bus</h4><p>64 MiB guest, VGA, data_bus[64] slot map.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/09-FCC-Tesla-Stability"><span class="num">09</span><h4>FCC, Tesla Valve, Stability</h4><p>CFL harmonics, directional flow bias.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/10-Hardware-Spiderweb"><span class="num">10</span><h4>Hardware Spiderweb</h4><p>Sub-micron narrative vs fabric mirror reality.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/11-Observability-Operator-Tools"><span class="num">11</span><h4>Observability &amp; Tools</h4><p>ELLIE logs, RTXProbe, NEXUS panel.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/12-Operator-Reality-Vs-Theory"><span class="num">12</span><h4>Reality vs Theory</h4><p>Honesty table — metaphor, proxy, measured.</p></a>
+        <a class="chapter-card" href="https://github.com/ZacharyGeurts/Field_Primer/wiki/Glossary"><span class="num">∞</span><h4>Glossary</h4><p>Terms across AMOURANTHRTX and NEXUS.</p></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Field Primer</strong> · CC BY-NC-SA 4.0 · Commercial &amp; derivative rights reserved by Zachary Robert Geurts</p>
+    <p>We hold this technology. Teach freely. Build locally. Trust your logs.</p>
+    <p class="brand-small">Engine branding: <a href="https://github.com/ZacharyGeurts/AMOURANTHRTX">AmouranthRTX</a> — presenter homage, not API authority.</p>
+  </footer>
+</body>
+</html>
