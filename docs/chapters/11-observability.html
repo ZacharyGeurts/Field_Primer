@@ -28,7 +28,6 @@
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
   <link rel="stylesheet" href="../css/reader.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
 </head>
 <body class="chapter-page accent-flow">
   <nav class="top"><div class="inner">
@@ -525,8 +524,8 @@ guide</pre>
 <p>Major claims in this chapter anchored for reproducibility. <span class="tag impl">Implemented</span> = grep today; <span class="tag meta">Metaphor</span> = intuition; <span class="tag phil">Philosophy</span> = discipline.</p>
 <table><thead><tr><th>Claim</th><th>Statement</th><th>Label</th><th>Evidence</th></tr></thead>
 <tbody><tr><td>ELLIE categories</td><td>Categorized stderr</td><td><span class="tag impl">Implemented</span></td><td><code>MAIN/VULKAN/CANVAS/THERMO/STATUS</code></td></tr><tr><td>Panel :9477</td><td>Human correlation UI</td><td><span class="tag impl">Implemented</span></td><td><code>NEXUS local panel</code></td></tr><tr><td>Screenshot culture</td><td>Pretty frames as proof</td><td><span class="tag phil">Philosophy</span></td><td><code>Rejected — grep first</code></td></tr><tr><td>Operator journal</td><td>Weekly rhythm</td><td><span class="tag phil">Philosophy</span></td><td><code>Receipts over vibes</code></td></tr></tbody></table>
-<div class="eq-block">\[observability = stderr_categories × panel_correlation × jsonl_archive\]</div>
-<pre class="grep-hook">grep -E &#x27;^(MAIN|VULKAN|THERMO)&#x27; run.log | tail -40</pre>
+<pre class="eq">observability = stderr_categories × panel_correlation × jsonl_archive</pre>
+<pre class="eq">grep -E &#x27;^(MAIN|VULKAN|THERMO)&#x27; run.log | tail -40</pre>
 <h3>Source paths</h3>
 <ul class="source-anchors"><li><code>Navigator/engine/ELLIE.hpp</code></li><li><code>NEXUS-Shield/panel_server.py</code></li></ul>
 </div>
@@ -540,8 +539,5 @@ guide</pre>
   </main>
   <footer><p>Field Technology v5 · Serious book · We do not hide the rocks.</p></footer>
   <script src="../js/reader.js" defer></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
-  <script defer src="../js/katex-render.js"></script>
 </body>
 </html>
