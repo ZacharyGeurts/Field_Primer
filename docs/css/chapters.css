@@ -21,9 +21,9 @@
 .chapter-hero-content {
   position: relative;
   z-index: 2;
-  max-width: 1100px;
+  max-width: min(96vw, 1280px);
   margin: 0 auto;
-  padding: 3rem 2rem 2rem;
+  padding: 3rem max(1.25rem, env(safe-area-inset-left)) 2rem max(1.25rem, env(safe-area-inset-right));
   width: 100%;
 }
 
@@ -36,11 +36,11 @@
 }
 
 .chapter-main {
-  max-width: 42rem;
+  max-width: min(48rem, 94vw);
   margin: 0 auto;
-  padding: 2rem 2rem 5rem;
-  line-height: 1.8;
-  font-size: 1.0625rem;
+  padding: 2rem max(1.25rem, env(safe-area-inset-left)) max(5rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-right));
+  line-height: 1.82;
+  font-size: clamp(1.1rem, 0.35vw + 1rem, 1.25rem);
 }
 
 .chapter-main.preface-full {
@@ -125,6 +125,113 @@
 
 .chapter-main .objectives li {
   margin: 0.35rem 0;
+}
+
+/* Mayer segment — definitive textbook beats (~1000–1200 words + 1 figure) */
+.chapter-main .mayer-segment {
+  margin: 2.5rem 0 3rem;
+  padding: 1.5rem 1.35rem 1.75rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+}
+
+.chapter-main .mayer-segment-label {
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.chapter-main .mayer-segment h2 {
+  margin-top: 0;
+}
+
+.chapter-main .mayer-segment .figure {
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* Masters textbook — layman lead-in before formal math */
+.chapter-main .lead-up {
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem 1.15rem;
+  background: rgba(56, 189, 248, 0.05);
+  border: 1px dashed rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius);
+}
+
+.chapter-main .lead-up-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.65rem;
+  font-family: var(--sans, Inter, system-ui, sans-serif);
+}
+
+/* Professor Grok — plain summary beside dense prose */
+.chapter-main .professor-grok {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem 1.1rem;
+  background: rgba(240, 208, 96, 0.07);
+  border: 1px solid rgba(240, 208, 96, 0.28);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+}
+
+.chapter-main .professor-grok-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  margin: 0 0 0.5rem;
+}
+
+body:not(.reader-active) .chapter-main .professor-grok p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.chapter-main .professor-grok p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* Per-page / per-segment local citations */
+.chapter-main .segment-citations {
+  margin: 1.5rem 0 0.75rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+}
+
+.chapter-main .segment-citations-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+.chapter-main .segment-citations ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.chapter-main .segment-citations li {
+  margin: 0.3rem 0;
+}
+
+.chapter-main .segment-citations a {
+  color: var(--accent);
 }
 
 .chapter-main h2 {
@@ -478,4 +585,49 @@ pre.eq {
   .chapter-toc ol {
     columns: 1;
   }
+}
+
+.read-first-banner {
+  margin: 1.5rem 0;
+}
+
+.read-first-page .read-first-gate {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.read-first-page .gate-section {
+  margin: 2rem 0;
+}
+
+.read-first-page .gate-cta {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.eq-block {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  background: rgba(56, 189, 248, 0.06);
+  border-radius: 6px;
+}
+
+.grep-hook {
+  margin: 0.5rem 0 1rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.84rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.figure.schematic svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
