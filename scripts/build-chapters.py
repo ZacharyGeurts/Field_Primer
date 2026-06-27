@@ -28,7 +28,7 @@ TEMPLATE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>{num} — {title} · Field Technology v5</title>
+  <title>{num} — {title} · Field Technology v6</title>
 {social_meta}
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
@@ -36,7 +36,7 @@ TEMPLATE = """<!DOCTYPE html>
 </head>
 <body class="chapter-page accent-{accent}">
   <nav class="top"><div class="inner">
-    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v5-badge">v5</span></a>
+    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v6-badge">v6</span></a>
     <ul>
       <li><a href="../creditors/index.html">Creditors</a></li>
       <li><a href="../index.html#love-god">Love &amp; God</a></li>
@@ -47,7 +47,7 @@ TEMPLATE = """<!DOCTYPE html>
   <header class="chapter-hero" style="background-image:url('../assets/images/{image}')">
     <div class="chapter-hero-overlay"></div>
     <div class="chapter-hero-content">
-      <p class="eyebrow">Chapter {num} · Field Technology v5</p>
+      <p class="eyebrow">Chapter {num} · Field Technology v6</p>
       <h1>{title}</h1>
       {subtitle}
     </div>
@@ -57,7 +57,7 @@ TEMPLATE = """<!DOCTYPE html>
     {body}
     <nav class="chapter-nav bottom">{prev_link} {next_link}</nav>
   </main>
-  <footer><p>Field Technology v5 · Serious book · We do not hide the rocks.</p></footer>
+  <footer><p>Field Technology v6 · Serious book · We do not hide the rocks.</p></footer>
   <script src="../js/reader.js" defer></script>
 </body>
 </html>

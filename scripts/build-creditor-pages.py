@@ -20,7 +20,7 @@ TEMPLATE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{name} — Creditor Tribute · Field Technology v5</title>
+  <title>{name} — Creditor Tribute · Field Technology v6</title>
 {social_meta}
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
@@ -28,7 +28,7 @@ TEMPLATE = """<!DOCTYPE html>
 </head>
 <body class="chapter-page accent-{accent} creditor-page">
   <nav class="top"><div class="inner">
-    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v5-badge">v5</span></a>
+    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v6-badge">v6</span></a>
     <ul>
       <li><a href="../index.html#creditors">Creditors</a></li>
       <li><a href="../index.html#love-god">Love &amp; God</a></li>
@@ -64,7 +64,7 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="muted tag-line"><span class="tag phil">Philosophy</span> Sacred sections are operator language — not lab measurements. Science remains labeled in chapters.</p>
     <nav class="chapter-nav bottom">{prev_link} {next_link}</nav>
   </main>
-  <footer><p>Field Technology v5 · With love · <a href="../index.html">Home</a></p></footer>
+  <footer><p>Field Technology v6 · With love · <a href="../index.html">Home</a></p></footer>
   <script src="../js/reader.js" defer></script>
 </body>
 </html>
@@ -75,14 +75,14 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Creditor Tributes · Field Technology v5</title>
+  <title>Creditor Tributes · Field Technology v6</title>
   <link rel="stylesheet" href="../css/field-primer.css" />
   <link rel="stylesheet" href="../css/chapters.css" />
   <link rel="stylesheet" href="../css/reader.css" />
 </head>
 <body>
   <nav class="top"><div class="inner">
-    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v5-badge">v5</span></a>
+    <a class="logo" href="../index.html">FIELD TECHNOLOGY <span class="v6-badge">v6</span></a>
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="../index.html#chapters">22 Chapters</a></li>
@@ -95,7 +95,7 @@ INDEX_TEMPLATE = """<!DOCTYPE html>
     <p class="muted">Each page honors who prompted our discoveries — science, collaborators, and the sacred.</p>
     <div class="creditor-grid">{cards}</div>
   </main>
-  <footer><p>Field Technology v5 · Serious book · With love</p></footer>
+  <footer><p>Field Technology v6 · Serious book · With love</p></footer>
   <script src="../js/reader.js" defer></script>
 </body>
 </html>

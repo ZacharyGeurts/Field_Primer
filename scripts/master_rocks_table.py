@@ -29,8 +29,13 @@ MASTER_ROCKS_HTML = f"""
 <tr><td>Sealed / sovereign time</td><td><code>TotalTime::seal()</code> + HMAC pulses</td><td><span class="tag impl">Implemented</span></td><td><code>SQUIDGIE</code> on verify fail</td></tr>
 <tr><td>x86.comp decorative</td><td>Default <code>./linux.sh run</code> path</td><td><span class="tag impl">Implemented</span></td><td>Field Die product</td></tr>
 <tr><td>Equations without bindings</td><td>Theory vocabulary until grep proves</td><td><span class="tag meta">Metaphor</span></td><td>Ch 12 capstone table layers</td></tr>
+<tr><td>Grok16 2.0 single fabric</td><td><code>belt_2_0</code> chunked redata · one amplitude at depth 0</td><td><span class="tag impl">Implemented</span></td><td><code>test-battery-belt</code> · integrate env</td></tr>
+<tr><td>Depth-field nested truth</td><td>Creation forbidden — <code>field_depth</code> stripped at gates</td><td><span class="tag impl">Implemented</span></td><td>field-depth-singularizer · Queen browser</td></tr>
+<tr><td>DNS egress MITM-free</td><td>Permitted egress hash match logging</td><td><span class="tag impl">Implemented</span></td><td><code>dns-egress-integrity.jsonl</code></td></tr>
+<tr><td>Host desktop first page</td><td>Mirror incumbent OS · field startbar</td><td><span class="tag impl">Implemented</span></td><td><code>:9477/field</code></td></tr>
+<tr><td>this_one / that_one</td><td>Phantom lanes blocked until existence correlates</td><td><span class="tag impl">Implemented</span></td><td>ironclad-spatial-existence doctrine</td></tr>
 </tbody></table>
-<p><strong>Open questions</strong> (honest gaps — not roadmap promises): calibrated GPU joules vs proxy entropy; wire DNSSEC validation beyond stub counters; Queen production parity across all gate classes; reproducible cross-host sovereign time under adversarial NTP. File issues against AMOURANTHRTX / NEXUS when you close a gap — then update this row.</p>
+<p><strong>Open questions</strong> (honest gaps — not roadmap promises): calibrated GPU joules vs proxy entropy; wire DNSSEC validation beyond stub counters; Queen production parity across all gate classes; reproducible cross-host sovereign time under adversarial NTP; belt_2_0 runtime wins on large redata workloads (micro-bench may favor host <code>-O2</code>). File issues against AMOURANTHRTX / NEXUS / Grok16 when you close a gap — then update this row.</p>
 """
 
 

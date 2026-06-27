@@ -9,4 +9,5 @@ python3 scripts/build-creditor-pages.py
 python3 scripts/build-chapters.py
 python3 scripts/build-index.py
 python3 scripts/build-gallery.py
-echo "v5 site built"
+python3 scripts/apply-v6-update.py
+echo "v6 site built"

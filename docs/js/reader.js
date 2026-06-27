@@ -4,7 +4,11 @@
 (function () {
   "use strict";
 
-  const STORAGE_KEY = "field-primer-reader-v1";
+  const STORAGE_KEY = "field-primer-reader-v2";
+  const ZOOM_MIN = 0.55;
+  const ZOOM_MAX = 3.5;
+  const LONG_PRESS_MS = 750;
+  const DOUBLE_TAP_MS = 320;
 
   const PRESETS = {
     vanilla: {
@@ -296,15 +300,21 @@
         <div class="reader-toolbar-right">
           ${prevLink ? `<a class="reader-btn" href="${readerHref(prevLink.getAttribute("href"))}">${prevLink.textContent.trim()}</a>` : ""}
           ${nextLink ? `<a class="reader-btn primary" href="${readerHref(nextLink.getAttribute("href"))}">${nextLink.textContent.trim()}</a>` : ""}
+          <button type="button" class="reader-btn" data-action="zoom-out" aria-label="Zoom out">−</button>
+          <span class="reader-zoom-pct" data-zoom-label>100%</span>
+          <button type="button" class="reader-btn" data-action="zoom-in" aria-label="Zoom in">+</button>
           <button type="button" class="reader-btn" data-action="settings" aria-label="Reader settings">⚙ Paper &amp; ink</button>
         </div>
       </div>
       <div class="reader-progress"><div class="reader-progress-bar"></div></div>
+      <div class="reader-zoom-hint" aria-live="polite">Pinch or Ctrl+wheel to zoom · double-tap or long-press to close</div>
       <div class="reader-viewport">
-        <div class="reader-page">
-          <article class="reader-paper">
-            <div class="reader-content"></div>
-          </article>
+        <div class="reader-zoom-inner">
+          <div class="reader-page">
+            <article class="reader-paper">
+              <div class="reader-content"></div>
+            </article>
+          </div>
         </div>
       </div>
     `;
@@ -322,6 +332,8 @@
     document.body.appendChild(settingsPanel);
 
     const viewport = shell.querySelector(".reader-viewport");
+    const zoomInner = shell.querySelector(".reader-zoom-inner");
+    const zoomLabel = shell.querySelector("[data-zoom-label]");
     const progressBar = shell.querySelector(".reader-progress-bar");
     const readerContent = shell.querySelector(".reader-content");
     readerContent.appendChild(contentClone);
@@ -329,6 +341,48 @@
     applySettings(settings, shell);
 
     let scrollY = 0;
+    let zoom = typeof settings.zoom === "number" ? settings.zoom : 1;
+
+    function clampZoom(z) {
+      return Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, z));
+    }
+
+    function applyZoom(z, persist) {
+      zoom = clampZoom(z);
+      settings.zoom = zoom;
+      if (zoomInner) {
+        zoomInner.style.setProperty("--reader-zoom", String(zoom));
+      }
+      if (zoomLabel) {
+        zoomLabel.textContent = `${Math.round(zoom * 100)}%`;
+      }
+      if (persist !== false) saveSettings(settings);
+    }
+
+    applyZoom(zoom, false);
+
+    let pinchStartDist = 0;
+    let pinchStartZoom = 1;
+    let longPressTimer = null;
+    let lastTap = 0;
+
+    function touchDistance(touches) {
+      const dx = touches[0].clientX - touches[1].clientX;
+      const dy = touches[0].clientY - touches[1].clientY;
+      return Math.hypot(dx, dy);
+    }
+
+    function clearLongPress() {
+      if (longPressTimer) {
+        clearTimeout(longPressTimer);
+        longPressTimer = null;
+      }
+    }
+
+    function onReaderGestureClose() {
+      if (settingsOpen) closeSettings();
+      else closeReader();
+    }
 
     function openReader() {
       scrollY = window.scrollY;
@@ -453,8 +507,77 @@
     launch.addEventListener("click", openReader);
     shell.querySelector('[data-action="exit"]')?.addEventListener("click", closeReader);
     shell.querySelector('[data-action="settings"]')?.addEventListener("click", openSettings);
+    shell.querySelector('[data-action="zoom-in"]')?.addEventListener("click", () => applyZoom(zoom + 0.12));
+    shell.querySelector('[data-action="zoom-out"]')?.addEventListener("click", () => applyZoom(zoom - 0.12));
     settingsOverlay.addEventListener("click", closeSettings);
     viewport.addEventListener("scroll", updateProgress, { passive: true });
+
+    viewport.addEventListener(
+      "wheel",
+      (e) => {
+        if (!document.body.classList.contains("reader-active")) return;
+        if (e.ctrlKey || e.metaKey) {
+          e.preventDefault();
+          const step = e.deltaY > 0 ? -0.06 : 0.06;
+          applyZoom(zoom + step);
+        }
+      },
+      { passive: false }
+    );
+
+    viewport.addEventListener(
+      "touchstart",
+      (e) => {
+        if (e.touches.length === 2) {
+          pinchStartDist = touchDistance(e.touches);
+          pinchStartZoom = zoom;
+          clearLongPress();
+          return;
+        }
+        if (e.touches.length === 1 && !settingsOpen) {
+          const now = Date.now();
+          if (now - lastTap < DOUBLE_TAP_MS) {
+            e.preventDefault();
+            onReaderGestureClose();
+            lastTap = 0;
+            return;
+          }
+          lastTap = now;
+          const t = e.touches[0];
+          const sx = t.clientX;
+          const sy = t.clientY;
+          clearLongPress();
+          longPressTimer = setTimeout(() => {
+            if (Math.hypot(t.clientX - sx, t.clientY - sy) < 12) onReaderGestureClose();
+          }, LONG_PRESS_MS);
+        }
+      },
+      { passive: false }
+    );
+
+    viewport.addEventListener(
+      "touchmove",
+      (e) => {
+        if (e.touches.length === 2 && pinchStartDist > 0) {
+          e.preventDefault();
+          const dist = touchDistance(e.touches);
+          applyZoom(pinchStartZoom * (dist / pinchStartDist));
+        } else {
+          clearLongPress();
+        }
+      },
+      { passive: false }
+    );
+
+    viewport.addEventListener("touchend", () => {
+      clearLongPress();
+      pinchStartDist = 0;
+    });
+
+    viewport.addEventListener("touchcancel", () => {
+      clearLongPress();
+      pinchStartDist = 0;
+    });
 
     let touchStartY = 0;
     settingsPanel.addEventListener(
@@ -481,16 +604,24 @@
         else closeReader();
       }
       if (e.key === "=" || e.key === "+") {
-        settings.size = Math.min(1.75, settings.size + 0.05);
-        applySettings(settings, shell);
-        saveSettings(settings);
-        syncSettingsUi();
+        if (e.shiftKey) {
+          settings.size = Math.min(1.75, settings.size + 0.05);
+          applySettings(settings, shell);
+          saveSettings(settings);
+          syncSettingsUi();
+        } else {
+          applyZoom(zoom + 0.08);
+        }
       }
       if (e.key === "-") {
-        settings.size = Math.max(0.9, settings.size - 0.05);
-        applySettings(settings, shell);
-        saveSettings(settings);
-        syncSettingsUi();
+        if (e.shiftKey) {
+          settings.size = Math.max(0.9, settings.size - 0.05);
+          applySettings(settings, shell);
+          saveSettings(settings);
+          syncSettingsUi();
+        } else {
+          applyZoom(zoom - 0.08);
+        }
       }
     });
 

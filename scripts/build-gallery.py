@@ -60,7 +60,7 @@ def main() -> None:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Gallery · Field Technology v5</title>
+  <title>Gallery · Field Technology v6</title>
   <meta name="description" content="22 chapters · generated mechanism figures · Queen robot brain · creditor portraits." />
   <link rel="canonical" href="https://zacharygeurts.github.io/Field_Primer/gallery.html" />
   <link rel="stylesheet" href="css/field-primer.css" />
@@ -69,7 +69,7 @@ def main() -> None:
 </head>
 <body>
   <nav class="top"><div class="inner">
-    <a class="logo" href="index.html">FIELD TECHNOLOGY <span class="v5-badge">v5</span></a>
+    <a class="logo" href="index.html">FIELD TECHNOLOGY <span class="v6-badge">v6</span></a>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="creditors/index.html">Creditors</a></li>
@@ -114,7 +114,7 @@ def main() -> None:
 
     <p class="muted" style="margin-top:2.5rem"><code>bash scripts/build-site.sh</code></p>
   </main>
-  <footer><p>Field Technology v5 · Serious book · With love</p></footer>
+  <footer><p>Field Technology v6 · Serious book · With love</p></footer>
   <script src="js/reader.js" defer></script>
 </body>
 </html>

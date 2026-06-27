@@ -175,10 +175,39 @@ body.reader-active > footer {
 /* Scroll viewport — the book */
 .reader-viewport {
   flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
+  overflow-x: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
+}
+
+.reader-zoom-hint {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 0.72rem;
+  color: rgba(232, 220, 200, 0.55);
+  padding: 0.35rem 0.75rem;
+  background: rgba(12, 10, 8, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.reader-zoom-inner {
+  --reader-zoom: 1;
+  transform: scale(var(--reader-zoom));
+  transform-origin: top center;
+  width: calc(100% / var(--reader-zoom));
+  margin: 0 auto;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+.reader-zoom-pct {
+  font-size: 0.75rem;
+  color: #c4a35a;
+  min-width: 2.75rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
 }
 
 .reader-page {
