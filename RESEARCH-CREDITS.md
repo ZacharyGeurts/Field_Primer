@@ -31,7 +31,7 @@ We cite theory; we do not claim laboratory reproduction of every equation on sil
 | **IEEE / POSIX networking stack** | Socket semantics underlying packet field sentences |
 | **Landauer · Bennett · Fredkin** (reversible computing discourse) | Why we label proxy integrals honestly |
 | **Grok16 2.0 single fabric** | One belt amplitude, chunked redata, integrate-at-prefix |
-| **Ironclad meld** | Linear time, depth-field impossible, this_one / that_one |
+| **Ironclad meld** | Linear time, depth fields sealed and destroyed, this_one / that_one |
 
 ---
 

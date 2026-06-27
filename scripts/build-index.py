@@ -91,7 +91,7 @@ def patch_about_copy(text: str) -> str:
     """Index about section — honest operator-textbook positioning."""
     about_block = """          <p>
             v6 is a <strong>manuscript-grade operator textbook</strong> — full sentences, drills, honesty labels —
-            updated for the 2026 stack: NEXUS host desktop, Grok16 2.0 single fabric, Ironclad depth-field impossibility,
+            updated for the 2026 stack: NEXUS host desktop, Grok16 2.0 single fabric, Ironclad depth fields sealed and destroyed,
             DNS egress integrity, and Queen browser gates. Chapter 1 locks thesis and the operator map;
             Chapter 12 and the <a href="chapters/22-glossary.html#master-rocks">master rocks table</a> label every claim
             <span class="tag impl">Implemented</span>, <span class="tag meta">Metaphor</span>, <span class="tag phil">Philosophy</span>, or <span class="tag vis">Visual</span>.

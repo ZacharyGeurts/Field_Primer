@@ -15,7 +15,7 @@ V6_ADDENDUM = {
     "01": """
 <section class="v6-addendum" id="v6-stack-2026">
   <h2>v6 addendum — what we shipped in 2026</h2>
-  <p class="tag-line"><span class="tag impl">Implemented</span> NEXUS-Shield v10 · Grok16 2.0 · single fabric · depth-field impossible</p>
+  <p class="tag-line"><span class="tag impl">Implemented</span> NEXUS-Shield v10 · Grok16 2.0 · single fabric · depth fields sealed and destroyed</p>
   <p>Since v5 manuscript freeze, the operator stack gained a <strong>host desktop</strong> landing (<code>:9477/field</code>),
   <strong>Queen Browser</strong> with field OS inside the Start tab, <strong>Grok16 2.0 single-fabric</strong> belt dispatch,
   and <strong>Ironclad safety meld</strong> — one field amplitude at depth zero, linear sovereign time (<code>ironclad:time:1</code>).</p>
@@ -23,7 +23,7 @@ V6_ADDENDUM = {
     <tr><th>Layer</th><th>What changed</th><th>Verify</th></tr>
     <tr><td>NEXUS-Shield</td><td>Connection gatekeeper · DNS/DHCP takeover · egress integrity · host freeze</td><td><code>nexus verify</code> · panel <code>:9477/command</code></td></tr>
     <tr><td>Grok16 2.0</td><td><code>belt_2_0</code> · <code>bench-triad</code> · <code>grok16-integrate.sh</code></td><td><code>test-battery-belt</code></td></tr>
-    <tr><td>Ironclad</td><td>this_one / that_one · depth-field creation forbidden</td><td><code>field-depth-singularizer</code></td></tr>
+    <tr><td>Ironclad</td><td>this_one / that_one · depth fields sealed and destroyed</td><td><code>field-depth-singularizer</code></td></tr>
     <tr><td>Queen</td><td>Browser gates · performance flyout · field-net classify</td><td><code>QUEEN_READY</code> · <code>:9481</code></td></tr>
     <tr><td>Landauer practice</td><td>Field Thermal Guard — incremental redata, budget-capped</td><td>thermal advisory panel</td></tr>
   </table>
@@ -52,7 +52,7 @@ V6_ADDENDUM = {
   <p>First page is the <strong>host desktop</strong> — familiar apps, field startbar. Queen Browser on <code>:9481</code>
   embeds the field OS in Start; drop/rise underlay calls <code>/api/field-underlay-surface</code>.
   <code>grok16-integrate.sh</code> wires canonical <code>G16_PREFIX</code> + <code>belt_2_0</code> to Queen, World_Redata, ZOCR.
-  Single fabric: parallel I/O may fan in; panel truth stays depth 0 — <code>field_depth</code> cannot persist.</p>
+  Single fabric: parallel I/O may fan in; panel truth stays depth 0 — depth fields sealed and destroyed at every gate.</p>
 </section>
 """,
 }
@@ -156,6 +156,32 @@ def add_creditors() -> None:
     print(f"  creditors-manifest → {len(doc['creditors'])} entries")
 
 
+DEPTH_FIELD_REPLACEMENTS = (
+    ("depth-field impossible", "depth fields sealed and destroyed"),
+    ("depth-field impossibility", "depth fields sealed and destroyed"),
+    ("depth-field creation forbidden", "depth fields sealed and destroyed"),
+    ("Depth-field nested truth", "Depth fields sealed and destroyed"),
+    ("Creation forbidden — <code>field_depth</code> stripped at gates", "Sealed and destroyed — <code>field_depth</code> cannot persist at any gate"),
+    ("<code>field_depth</code> cannot persist.", "Depth fields sealed and destroyed at every gate."),
+    ("depth-field creation forbidden", "depth fields sealed and destroyed"),
+)
+
+
+def patch_depth_field_doctrine() -> None:
+    """Align published HTML with Ironclad: depth fields sealed and destroyed."""
+    targets = [DOCS / "index.html", *CHAPTERS.glob("*.html")]
+    for path in targets:
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        orig = text
+        for old, new in DEPTH_FIELD_REPLACEMENTS:
+            text = text.replace(old, new)
+        if text != orig:
+            path.write_text(text, encoding="utf-8")
+            print(f"  depth doctrine → {path.name}")
+
+
 def patch_css_badge() -> None:
     css = DOCS / "css/field-primer.css"
     text = css.read_text(encoding="utf-8")
@@ -174,6 +200,7 @@ def main() -> None:
     patch_css_badge()
     add_creditors()
     inject_addenda()
+    patch_depth_field_doctrine()
     patch_index_v6()
     print("v6 update applied")
 
