@@ -232,9 +232,15 @@ def build_creditor_grid(manifest: dict) -> str:
 
 def patch_creditor_grid(text: str, manifest: dict) -> str:
     inner = "\n".join(build_creditor_grid(manifest).splitlines()[1:-1])
-    pattern = r'(<section id="creditors">.*?<div class="creditor-grid">)\s*.*?\s*(</div>\s*<p style="margin-top:1\.5rem">)'
-    repl = r"\1\n" + inner + "\n      \2"
-    return re.sub(pattern, repl, text, count=1, flags=re.DOTALL)
+    pattern = re.compile(
+        r'(<section id="creditors">.*?<div class="creditor-grid">)\s*.*?\s*(</div>\s*<p style="margin-top:1\.5rem">)',
+        re.DOTALL,
+    )
+
+    def _repl(m: re.Match[str]) -> str:
+        return f"{m.group(1)}\n{inner}\n      {m.group(2)}"
+
+    return pattern.sub(_repl, text, count=1)
 
 
 def patch_v6_badge(text: str) -> str:
